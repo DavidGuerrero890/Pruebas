@@ -2,6 +2,8 @@
   "nodes": [
     {"id": "M-18", "group": 1},
     {"id": "M-19", "group": 1},
+    {"id": "Myriel", "group": 1},
+    {"id": "Napoleon", "group": 1},
     {"id": "Mlle.Baptistine", "group": 1},
     {"id": "Mme.Magloire", "group": 1},
     {"id": "CountessdeLo", "group": 1},
