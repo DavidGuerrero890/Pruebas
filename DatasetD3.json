@@ -161,7 +161,6 @@
 {"source":"M-16 – Pagos ", "target": "M-07 – Contabilidad y Conciliaciones", "value": 1},
 {"source":"NSGC", "target": "M-07 – Contabilidad y Conciliaciones", "value": 1},
 {"source":"M-18 – Registro", "target": "M-07 – Contabilidad y Conciliaciones", "value": 1},
-
 {"source":"M-16 – Pagos", "target": "Motor de Cálculo y Liquidador", "value": 1},
 {"source":"M-16 – Pagos", "target": "EC-01 – Registro Central de operaciones", "value": 1},
 {"source":"M-16 – Pagos", "target": "M-01 – Atención al Cliente", "value": 1},
