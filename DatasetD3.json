@@ -77,7 +77,7 @@
 {"id": "Unidad de Información y Análisis Financiero", "group": 1},
 {"id": "Usuario Externo", "group": 1},
 {"id": "VUCE", "group": 1},
-{"id": "Zonas Francas (Trayectoria Efectiva - Movimiento mercancías)", "group": 1},
+{"id": "Zonas Francas (Trayectoria Efectiva - Movimiento mercancías)", "group": 1}
 
   ],
   "links": [
@@ -406,7 +406,7 @@
 {"source":"M-04 – Devoluciones y Compensaciones", "target": "Registro Único Nacional de Transporte - RUNT", "value": 1},
 {"source":"M-04 – Devoluciones y Compensaciones", "target": "Resgistraduría Nacional del Estado Civil de Colombia", "value": 1},
 {"source":"M-04 – Devoluciones y Compensaciones", "target": "SIIF-Nación", "value": 1},
-{"source":"M-04 – Devoluciones y Compensaciones", "target": "Zonas Francas (Trayectoria Efectiva - Movimiento mercancías)", "value": 1},
+{"source":"M-04 – Devoluciones y Compensaciones", "target": "Zonas Francas (Trayectoria Efectiva - Movimiento mercancías)", "value": 1}
 
   ]
 }
