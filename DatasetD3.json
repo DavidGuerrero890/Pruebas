@@ -316,6 +316,7 @@
 {"source":"M-16 – Pagos", "target": "Motor de Cálculo y Liquidador", "value": 1},
 {"source":"M-16 – Pagos", "target": "NSGA", "value": 1},
 {"source":"M-16 – Pagos", "target": "NSGD", "value": 1},
+{"source":"M-16 – Pagos", "target": "Pasarela de Pago", "value": 1},
 {"source":"M-10 – Gestión de Fiscalización TACI", "target": "M-01 – Atención al Cliente", "value": 1},
 {"source":"M-10 – Gestión de Fiscalización TACI", "target": "M-03 – Retenciones", "value": 1},
 {"source":"M-10 – Gestión de Fiscalización TACI", "target": "M-09 – Riesgos", "value": 1},
