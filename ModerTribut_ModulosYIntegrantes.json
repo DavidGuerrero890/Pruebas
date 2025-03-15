@@ -1,14 +1,14 @@
 [
     {
-        "modulo": "Supervisor",
-        "integrantes": ["Nombre1"]
+"modulo": ["Supervisores"],
+"integrantes": ["Johana Andrea Barragan Mogollon"]
     },
     {
-        "modulo": "M-01 – Atención al Cliente",
-        "integrantes": ["Nombre2", "Nombre3", "Nombre4", "Nombre5", "Nombre6", "Nombre7"]
+"modulo": ["M-01 – Atención al Cliente"],
+"integrantes": ["Jose David Velasquez Mayorga", "Ana Milena Burgos Salgado", "Adriana Sarmiento Bohorquez", "Carlos Enrique Valenzuela Rico", "Yuly Andrea Sierra Chacón", "Jose Leonardo Useche Martinez"]
     },
     {
-        "modulo": "M-02 – Declaraciones",
+        "modulo": ["M-02 – Declaraciones"],
         "integrantes": ["Nombre8", "Nombre9", "Nombre10", "Nombre11", "Nombre12", "Nombre13"]
     }
 ]
