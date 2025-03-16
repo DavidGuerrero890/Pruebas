@@ -435,7 +435,7 @@
 {"source":"M-01 – Atención al Cliente", "target": "M-15 – Planeación Tributaria", "value": 1},
 {"source":"M-01 – Atención al Cliente", "target": "M-19 – Ecosistema de Facturación Electrónica", "value": 1},
 {"source":"M-01 – Atención al Cliente", "target": "Información Exogena", "value": 1},
-{"source":"M-01 – Atención al Cliente", "target": "Aduanas", "value": 1},
+{"source":"M-01 – Atención al Cliente", "target": "Aduanas", "value": 1}
 
   ]
 }
