@@ -459,7 +459,6 @@
 {"source":"M-01 – Atención al Cliente", "target": "M-13 – Actos Jurisdiccionales", "value": 1},
 {"source":"M-01 – Atención al Cliente", "target": "M-14 – Gestión y Apoyo Jurídico", "value": 1},
 {"source":"M-01 – Atención al Cliente", "target": "M-15 – Planeación Tributaria", "value": 1},
-{"source":"M-01 – Atención al Cliente", "target": "M-19 – Ecosistema de Facturación Electrónica", "value": 1},
 {"source":"M-01 – Atención al Cliente", "target": "Información Exogena", "value": 1},
 {"source":"M-01 – Atención al Cliente", "target": "Aduanas", "value": 1},
 {"source":"M-12 – Recursos y Revocatorias", "target": "M-09 – Riesgos", "value": 1},
@@ -473,7 +472,8 @@
 {"source":"M-05 – Cobranzas", "target": "M-09 – Riesgos", "value": 1},
 {"source":"M-05 – Cobranzas", "target": "M-13 – Actos Jurisdiccionales", "value": 1},
 {"source":"M-05 – Cobranzas", "target": "M-14 – Gestión y Apoyo Jurídico", "value": 1},
-{"source":"M-05 – Cobranzas", "target": "EC-01 – Registro Central de Operaciones", "value": 1}
+{"source":"M-05 – Cobranzas", "target": "EC-01 – Registro Central de Operaciones", "value": 1},
+{"source":"M-19 – Ecosistema de Facturación Electrónica", "target": "EC-01 – Registro Central de Operaciones", "value": 1}
 
   ]
 }
