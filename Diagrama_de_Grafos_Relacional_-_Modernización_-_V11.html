@@ -334,7 +334,7 @@
             function changeNodeAndLinkColors(node){
                 circles.attr("fill", function(d){
                     if (d.id === node.id){
-                        return "#64b5f6"
+                        return "#3498db"
                         d3.select(this).style("visibility", "visible")
                     }else if (isConnected(node, d)){
                         return "red"
