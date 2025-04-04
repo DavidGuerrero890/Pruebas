@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>Diagrama de Grafos Relacional - Modernización Tributaria</title>
+    
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+	<!-- <script src="d3.v7.min.js"></script> -->
+    
+    <style> 
+        /* Estilo del grafo */
+        text {
+            font-family: sans-serif;
+            font-size: 11px;
+          }
+        #graph-container {
+            text-align: center;
+            margin-top: 100px; /* Asegura que el grafo no quede oculto por el header */
+        }
+        
+        /* Estilo de la Tabla de Modulos y Integrantes */
+        #table-modal {
+            width: 100%;
+            max-height: 80vh; /* Para que la tabla nunca sea más alta que la pantalla */
+            overflow: auto;
+            display: block; /* Permite el desplazamiento horizontal */
+        }
+        #table-modal th {
+            padding: 8px;
+        }
+        #table-modal td {
+            padding: 10px;
+        }
+        
+        /* Estilo de la Tabla lateral Izquierdo y Modulos y Integrantes */
+        #table-container {
+            margin-top: 10px; /* Espacio entre el grafo y la tabla */
+            margin-bottom: 150px; /* Espacio entre la tabla y el footer */
+            padding: 20px;
+            background-color: #f9f9f9;
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Centrar horizontalmente */
+            justify-content: flex-start;
+            width: 100%;
+        }
+        #nodeTable td, 
+        #nodeTable th {
+            text-align: left !important; /* Forzar alineación a la izquierda */
+            vertical-align: top; /* Evita que el texto se centre verticalmente */
+            padding: 8px; /* Espacio interno para mejor presentación */
+        }
+        #nodeTable td div {
+            display: block; /* Asegurar que cada nodo se muestre en una nueva línea */
+            text-align: left;
+        }
+        
+        /* Estilo de la Tabla lateral Izquierdo al dar clic en cualquier Modulo */
+        .selectable {
+            cursor: pointer;
+        }
+        .selectable.selected {
+            color: dodgerblue;
+            font-weight: bold;
+        }
+        
+    </style>
+    
+</head>
+<body>
+    
+    <!-- Titulo de la Pagina Web -->
+    <header style="text-align: center; padding: 2px; background: #f4f4f4; position: fixed; top: 0; width: 100%; z-index: 1000;">
+        <h1>Diagrama de Grafos Relacional - Modernización Tributaria - V1.1 - 03/04/2025</h1>
+    </header>
+    
+    <!-- Estilo del Tooltip -->
+    <style>
+        .tooltip {
+                    opacity: 0;
+                    position: absolute;
+                    pointer-events: none;
+                    font-family: Arial, helvetica, sans-serif;
+                    font-size: 1rem;
+                    padding: .5rem;
+                    background: rgba(0, 0, 0, 0.7);
+                    border: 1px solid #FFFFFF;
+                    box-shadow: rgba(0, 0, 0, 0.5) 1px 1px 10px;
+                    color: #FFFFFF;
+                    border-radius: 4px;    
+                }
+    </style>
+    
+    <!-- Estilo de la Tabla de Modulos, Lateral Izquierdo -->
+    <div id="module-table-container" 
+       style="position: absolute; 
+               left: 30px; 
+                top: 130px; 
+                width: 450px; 
+                background: #f9f9f9; 
+                padding: 10px; 
+                border: 1px solid #ccc; 
+                overflow-y: auto; 
+                max-height: 600px;
+        ">
+        <h3>Módulos, Hitos y Usuarios. Internos y Externos</h3>
+        <ul id="module-list" style="list-style-type: none; padding: 0;"></ul>
+    </div>
+    
+    <!-- Script del Grafo -->
+    <div id="graph-container"></div>
+    <script>
+        
+        console.log ("Inicializando Script")
+
+        urlModulosLinks = "https://raw.githubusercontent.com/DavidGuerrero890/Pruebas/refs/heads/main/ModerTribut_ModulosYLinksV11.json"
+
+        d3.json(urlModulosLinks).then(function(data){
+
+            // Creamos escala de color
+            //let escalaColor = d3.scaleOrdinal(d3.schemeCategory10)
+            let escalaColor = d3.scaleOrdinal()
+                .domain([1, 2, 3, 4, 5]) // Ejemplo de grupos
+                .range(["#3498db", "#1abc9c", "#eb984e", "#ffff00", "#ff00ff"]) // Colores personalizados
+            
+            // Se guardan los colores iniciales
+            const originalNodeColors = {}
+            const originalLinkColors = {}
+            const originalNodeTitles = {}
+            
+            // Calcular el grado de cada nodo (entradas + salidas)
+            let nodeDegree = {}
+            
+            // Inicializar con 0 conexiones
+            data.nodes.forEach(node => nodeDegree[node.id] = 0)
+            
+            // Contar conexiones de cada nodo
+            data.links.forEach(link => {
+                nodeDegree[link.source] = (nodeDegree[link.source] || 0) + 1;
+                nodeDegree[link.target] = (nodeDegree[link.target] || 0) + 1;
+            })
+            
+            // Definir una escala para el tamaño del nodo
+            let minValor = d3.min(Object.values(nodeDegree));
+            let maxValor = d3.max(Object.values(nodeDegree));
+            let escalaRadio = d3.scaleSqrt()
+                .domain([minValor, maxValor]) // Rango de conexiones
+                .range([5, 40]) // Rango de tamaño del nodo (mínimo y máximo)
+            
+            // Creamos el LAYOUT general
+            let layout = d3.forceSimulation()
+                    .force("link", d3.forceLink().id(d=>d.id).distance(200))
+                    .force("charge", d3.forceManyBody().strength(-600))
+                    .force("center", d3.forceCenter(960,540))
+                    .force("x", d3.forceX(960).strength(0.01)) // Mantiene movimiento horizontal
+                    .force("y", d3.forceY(540).strength(0.01)) // Mantiene movimiento vertical
+                    .velocityDecay(0.4) // Reducir fricción para más movimiento
+                    .alpha(1) // Evitar que la simulación se detenga
+                    .alphaDecay(0.0005); // Mantiene la simulación corriendo
+
+            // Creamos el LAYOUT de los nodos y links
+            layout
+                .nodes(data.nodes)
+                // función para actualizar posición
+                .on("tick", onTick) 
+            layout  
+                .force("link")
+                .links(data.links)
+
+            // Crear espacio svg
+            let svg = d3.select("#graph-container")
+                .append("svg")
+                .attr("width", 1920)
+                .attr("height", 1080)
+                .style("margin-left", "300px"); // Desplazar el grafo a la derecha
+
+            // Definir el marcador de flecha
+            svg.append("defs").selectAll("marker")
+                .data(["end"])
+                .enter().append("marker")
+                .attr("id", String)
+                .attr("viewBox", "0 -5 10 10")
+                .attr("refX", 35)
+                .attr("refY", 0)
+                .attr("markerWidth", 6)
+                .attr("markerHeigth", 6)
+                .attr("orient", "auto")
+                .append("path")
+                .attr("d", "M0,-5 L10,0 L0,5")
+                .attr("class", "arrow")
+                .style("fill", "black")
+            
+            // Crear el espacio para las líneas
+            let defs = svg.append("defs");
+            let links = svg
+                .append ("g")
+                .attr("class", "links")
+                .selectAll("line")
+                .data(data.links)
+                .join("line")
+                .style ("stroke-width", d=>d.value55)
+                .style ("stroke", d => {
+                    originalLinkColors['${d.source.id}-${d.target.id}'] = "#c8c8c8"
+                    return originalLinkColors['${d.source.id}-${d.target.id}']
+                })
+                .attr("marker-end", "urlModulosLinks(#end)")
+                //.attr("marker-end", "url(#arrow)")
+
+            // Crear el espacio para los nodos
+            let nodes = svg
+                .append("g")
+                .attr("class", "nodes")
+                .selectAll("g")
+                .data(data.nodes)
+                .join("g")
+                .attr("r", 5)
+                .attr("fill", d => escalaColor(d.group))
+                // Control del tooltip
+                .on("mouseover", (event, d) => pintarTooltip(event, d))
+                .on("mouseout", borrarTooltip)
+
+            // Creamos variable tooltip
+            var tooltip = d3.select("body")
+                .append("div")
+                .attr("class", "tooltip")
+            
+            // Crear el espacio para los circulos
+            let circles = nodes.append("circle")
+                //.attr("r",8)
+                .attr("r", d => escalaRadio(nodeDegree[d.id])) // Ajustar tamaño según conexiones
+                .attr("fill", d => escalaColor(d.group))
+                // Preparar el movimiento interactivo de los nodos
+                .call(d3.drag()
+                    .on("start", (event, d) => dragstarted(event, d))
+                    .on("drag", (event, d) => dragged(event, d))
+                    .on("end", (event, d) => dragended (event, d))
+                )
+            
+            // Evento de clic en los nodos
+            .on("click", function(event, d){
+                changeNodeAndLinkColors(d)
+                event.stopPropagation()
+                actualizarTabla(d);
+                event.stopPropagation();
+            });
+            
+            // Actualizar el contenido de la Tabla de Relaciones
+            function actualizarTabla(nodo) {
+                
+                // Función para ordenar primero los que comienzan con "M-" y luego el resto alfabéticamente
+                function ordenarNodos(nodos) {
+                    return nodos.sort((a, b) => {
+                        const esM_A = a.startsWith("M-");
+                        const esM_B = b.startsWith("M-");
+                        if (esM_A && !esM_B) return -1; // "M-" primero
+                        if (!esM_A && esM_B) return 1;  // "M-" primero
+                        return a.localeCompare(b); // Orden alfabético
+                    });
+                }
+                
+                // Obtener nodos entrantes y salientes
+                let entrantes = ordenarNodos( data.links
+                    .filter(link => link.target.id === nodo.id)
+                    .map(link => link.source.id)
+                    .filter(id => !id.startsWith("Hito")) // Excluir nodos que empiezan con "Hitos"
+                    )
+                    //.sort()
+                    .map(id => `<div>${id}</div>`) // Agregamos la clase "selectable"
+                    .join("");
+
+                let salientes = ordenarNodos( data.links
+                    .filter(link => link.source.id === nodo.id)
+                    .map(link => link.target.id)
+                    )
+                    //.sort()
+                    .map(id => `<div>${id}</div>`) // Agregamos la clase "selectable"
+                    .join("");
+                
+                // Obtener nodos cuyo ID comienza con "Hitos"
+                let hitos = data.links
+                    .filter(link => link.source.id === nodo.id || link.target.id === nodo.id) // Filtrar conexiones con el nodo seleccionado
+                    .map(link => link.source.id === nodo.id ? link.target.id : link.source.id) // Obtener el otro nodo en la relación
+                    .filter(id => id.startsWith("Hito")) // Filtrar solo los que comienzan con "Hitos"
+                    .sort()
+                    .map(id => `<div>${id}</div>`)
+                    .join("");
+
+                let tbody = d3.select("#nodeTable tbody");
+                tbody.html("");  // Limpiar contenido anterior
+
+                tbody.append("tr")
+                    .html(`
+                        <td>${nodo.id}</td>
+                        <td style="text-align: center;">${entrantes || "<div>Ninguno</div>"}</td>
+                        <td style="text-align: center;">${salientes || "<div>Ninguno</div>"}</td>
+                        <td style="text-align: center;">${hitos || "<div>Ninguno</div>"}</td>
+                    `);
+            }
+            
+            function agregarEventosSeleccion() {
+                // Seleccionamos solo los elementos de la tabla lateral izquierda
+                d3.selectAll("#tabla-lateral-izquierda .selectable").on("click", function(event) {
+                    // Evita que el clic en un nodo se propague al body
+                    event.stopPropagation();
+
+                    // Removemos la selección previa
+                    d3.selectAll("#tabla-lateral-izquierda .selectable").classed("selected", false);
+
+                    // Marcamos el elemento actual como seleccionado
+                    d3.select(this).classed("selected", true);
+                });
+
+                // Evento para quitar la selección si se hace clic fuera de la tabla
+                d3.select("body").on("click", function() {
+                    d3.selectAll("#tabla-lateral-izquierda .selectable").classed("selected", false);
+                });
+            }
+            
+            // Indicar Nombres de los Nodos
+            let labels = nodes.append("text")
+                .text(function(d) { return d.id; })
+                .attr('x', 6)
+                .attr('y', 3)
+                .attr("fill", "#2c3e50")
+                .style("font-weight", "bold");
+
+            //Guardar los colores originales
+            data.nodes.forEach(d => {
+                originalNodeColors[d.id] = escalaColor(d.group)
+                originalNodeTitles[d.id] = d.id
+            })
+
+            function changeNodeAndLinkColors(node){
+                circles.attr("fill", function(d){
+                    if (d.id === node.id){
+                        return "#64b5f6"
+                        d3.select(this).style("visibility", "visible")
+                    }else if (isConnected(node, d)){
+                        return "red"
+                        d3.select(this).style("visibility", "visible")
+                    }else{
+                        return "#dfe7ed"
+                        d3.select(this).style("visibility", "visible")
+                    }
+                    return originalNodeColors[d.id]
+                })
+
+                labels.attr("fill",function(d){
+                    if (d.id === node.id || isConnected(node, d)){
+                        return "black"
+                        d3.select(this).style("visibility", "visible")
+                    }else{
+                        return "#dfe7ed"
+                        d3.select(this).style("visibility", "visible")
+                    }
+                    return originalNodeColors[d.id]
+                })
+
+                links.style("stroke", function(d){
+                    if (d.source.id === node.id || d.target.id === node.id){
+                        return "red"
+                        d3.select(this).style("visibility", "visible")
+                    }else{
+                        return "#dfe7ed"
+                        d3.select(this).style("visibility", "visible")
+                    }
+                    return originalLinkColors['${d.source.id}-${d.target.id}']
+                })
+            }
+
+            function isConnected(node1, node2){
+                return data.links.some(link => (link.source.id === node1.id && link.target.id === node2.id) ||
+                                                (link.source.id === node2.id && link.target.id === node1.id))
+            }
+
+            svg.on("click", function(){
+                circles.style("visibility", "visible").attr("fill",function(d){
+                    return originalNodeColors[d.id]
+                });
+
+                labels.style("visibility", "visible").attr("fill",function(d){
+                    return "#2c3e50"
+                });
+
+                links.style("visibility", "visible").style("stroke",function(d){
+                    return originalLinkColors['${d.source.id}-${d.target.id}']
+                });
+                // Limpiar la tabla al hacer clic fuera de los nodos
+                d3.select("#nodeTable tbody").html(""); 
+            })
+            
+            // Definimos función onTick
+            function onTick(){
+                nodes.attr("transform", function(d) {
+                      return "translate(" + d.x + "," + d.y + ")"
+                    })
+                links
+                .attr("x1", d => d.source.x)
+                .attr("x2", d => d.target.x)
+                .attr("y1", d => d.source.y)
+                .attr("y2", d => d.target.y)
+            }
+
+            // Añadimos las funciones de movimiento
+            function dragstarted(event, d) {
+                if (!event.active) layout.alphaTarget(0.3).restart()
+                d.fx = d.x
+                d.fy = d.y
+            }
+
+            function dragged(event, d) {
+                d.fx = event.x
+                d.fy = event.y
+            }
+
+            function dragended(event, d) {
+                if (!event.active) layout.alphaTarget(0)
+                d.fx = null
+                d.fy = null
+            }
+            
+            // Funciones para que aparezca y desaparezca el tooltip
+            function borrarTooltip() {
+                tooltip.style("opacity", 0)
+            }
+            function pintarTooltip(event, d) {
+                let transform = d3.zoomTransform(svg.node()); // Obtener la transformación actual del zoom
+
+                let x = transform.applyX(d.x); // Aplicar la transformación a la coordenada X
+                let y = transform.applyY(d.y); // Aplicar la transformación a la coordenada Y
+                
+                tooltip.text(d.id)
+                    .style("top", (y + 10) + "px")  // Ajustar la posición Y con margen
+                    .style("left", (x + 10) + "px") // Ajustar la posición X con margen
+                    .style("opacity", 1);
+            }
+            
+            // Función para funcionen los links de la Tabla de Módulos lateral Izquierda
+            function llenarTablaModulos() {
+                let moduleList = d3.select("#module-list");
+                moduleList.html(""); // Limpiar la lista antes de llenarla
+
+                data.nodes.forEach(node => {
+                    moduleList.append("li")
+                        .attr("class", "selectable") // Agregar la clase 'selectable'
+                        .style("cursor", "pointer")
+                        .style("padding", "5px")
+                        .style("border-bottom", "1px solid #ddd")
+                        .text(node.id)
+                        .on("click", function(event) {
+                            event.stopPropagation(); // Evita que el clic se propague al body
+
+                            // Remover selección previa
+                            d3.selectAll("#module-list .selectable").classed("selected", false);
+
+                            // Aplicar selección al elemento clickeado
+                            d3.select(this).classed("selected", true);
+
+                            // Llamar funciones adicionales
+                            changeNodeAndLinkColors(node); // Resaltar nodos y enlaces
+                            actualizarTabla(node); // Actualizar la tabla de relaciones
+                        });
+                });
+            }
+
+            // Llamar la función después de cargar los nodos
+            llenarTablaModulos();
+            
+            // Quitar selección al hacer clic fuera de la tabla
+            d3.select("body").on("click", function() {
+                d3.selectAll("#module-list .selectable").classed("selected", false);
+            });
+
+        })
+    </script>
+    
+    <!-- Tabla de Relaciones entre los Módulos -->
+    <div id="table-container" style="text-align: center; padding: 10px; background: #f4f4f4; bottom: 0; width: 100%;">
+        <h2>Relaciones entre los Módulos, Usuarios y Hitos</h2>
+        <table id="nodeTable" border="1">
+            <thead>
+                <tr>
+                    <th>Módulo, Hito o Usuario Principal</th>
+                    <th>Módulos y Usuarios Entrantes</th>
+                    <th>Módulos y Usuarios Salientes</th>
+                    <th>Hitos</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+    
+    <!-- Acerca de y Agradecimientos -->
+    <footer style="text-align: center; padding: 2px; background: #f4f4f4; position: fixed; bottom: 0; width: 100%;">
+        <p style="font-size: 18px;"><b>Ideado, Diseñado y Desarrollado por: </b>David Antonio Guerrero Gómez.<br></p>
+        <p style="font-size: 17px;"><b>Data otorgada por: </b>Equipo de Modernización Tributaria.<br></p>
+        <button id="showTableBtn" style="margin-top: 10px; padding: 8px 12px; cursor: pointer; font-size: 15px;"><b>Equipo de Modernización Tributaria</b></button>
+    </footer>
+    
+    <!-- Tabla de Integrantes en los Modulos -->
+    <div id="modal" style="
+        display: none; 
+        position: fixed; 
+        top: 50%; 
+        left: 50%; 
+        transform: translate(-50%, -50%); 
+        background: white; 
+        padding: 20px; 
+        border: 1px solid #ccc; 
+        box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+        z-index: 2000;
+    ">
+        <h2>Equipo de Modernización Tributaria</h2>
+        <table id="table-modal" border="1">
+            <thead>
+                <tr>
+                    <th>Módulo</th>
+                    <th>Integrantes</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+            </tbody>
+        </table>
+        <br>
+        <button id="closeModalBtn" style="cursor: pointer;"><b>Cerrar</b></button>
+    </div>
+    
+    <!-- Script que llena la Tabla de Integrantes en los Modulos -->
+    <script>
+        urlModulosIntegrantes = "https://raw.githubusercontent.com/DavidGuerrero890/Pruebas/refs/heads/main/ModerTribut_ModulosYIntegrantesV11.json"
+        
+        document.getElementById("showTableBtn").addEventListener("click", function () {
+            const urlJson = urlModulosIntegrantes;
+
+            d3.json(urlJson).then(function (data) {
+                actualizarTablaIntegrantes(data);
+            }).catch(function (error) {
+                console.error("Error cargando el JSON:", error);
+            });
+        });
+
+        function actualizarTablaIntegrantes(data) {
+            let tbody = d3.select("#table-modal tbody");
+            tbody.html("");
+
+            data.forEach(modulo => {
+                let modulos = modulo.modulos.join("<br>");
+                let integrantes = modulo.integrantes.join("<br>");
+
+                tbody.append("tr")
+                    .html(`
+                        <td>${modulos}</td>
+                        <td>${integrantes}</td>
+                    `);
+            });
+        }
+    </script>
+    
+    <script>
+        document.getElementById("showTableBtn").addEventListener("click", function () {
+            document.getElementById("modal").style.display = "block";
+        });
+
+        document.getElementById("closeModalBtn").addEventListener("click", function () {
+            document.getElementById("modal").style.display = "none";
+        });
+    </script>
+    
+</body>
+</html>
