@@ -14,14 +14,14 @@
 									"tareas": [
 										{"nombre": "Creación de usuarios"},
 										{"nombre": "Validación de datos de identidad"}
-									],
+									]
 								},
 								{
 									"nombre": "Seguridad",
 									"tareas": [
 										{"nombre": "Gestión de contraseña"},
 										{"nombre": "Gestionar token de seguridad  - firma"}
-									],
+									]
 								},
 								{
 									"nombre": "Configuración",
@@ -30,7 +30,7 @@
 										{"nombre": "Personalización de experiencia de usuario de acuerdo al protocolo de relacionamiento con el ciudadano y la información de registro"}
 									]
 								}
-							],
+							]
 						},
 						{
 							"nombre": "Trámites y Servicios TACI",
