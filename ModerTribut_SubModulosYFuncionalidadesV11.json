@@ -12,19 +12,19 @@
 								{
 									"nombre": "Registro de usuarios",
 									"tareas": [
-										{"nombre": "Creación de usuarios", "Validación de datos de identidad"}
+										{"nombre": ["Creación de usuarios", "Validación de datos de identidad"]}
 									]
 								},
 								{
 									"nombre": "Seguridad",
 									"tareas": [
-										{"nombre": "Gestión de contraseña", "Gestionar token de seguridad  - firma"}
+										{"nombre": ["Gestión de contraseña", "Gestionar token de seguridad  - firma"]}
 									]
 								},
 								{
 									"nombre": "Configuración",
 									"tareas": [
-										{"nombre": "Preferencias - Foto de perfil", "Personalización de experiencia de usuario de acuerdo al protocolo de relacionamiento con el ciudadano y la información de registro"}
+										{"nombre": ["Preferencias - Foto de perfil", "Personalización de experiencia de usuario de acuerdo al protocolo de relacionamiento con el ciudadano y la información de registro"]}
 									]
 								}
 							]
@@ -35,7 +35,7 @@
 								{
 									"nombre": "Frame de acceso a trámites",
 									"tareas": [
-										{"nombre": "Listar trámites"}
+										{"nombre": ["Listar trámites"]}
 									]
 								}
 							]
