@@ -996,7 +996,7 @@
 "nombre": "Verifica aplicación reglas contables", "tareas": [
 {"nombre": "Verifica aplicación de la parametrización contable"}] },{
 "nombre": "Verifica registro en el “RCO”", "tareas": [
-{"nombre": "Verifica aplicación de las reglas de negocio del "RCO-Registro Central de operaciones""}] }] },{
+{"nombre": "Verifica aplicación de las reglas de negocio del 'RCO-Registro Central de operaciones'"}] }] },{
 "nombre": "Contabilidad de ingresos", "funcionalidades": [{
 "nombre": "Registro y reconocimiento ", "tareas": [
 {"nombre": "Aplicar reglas para registro de Saldos Iniciales"},
