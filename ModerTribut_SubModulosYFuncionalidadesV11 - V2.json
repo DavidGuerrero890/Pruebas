@@ -1009,7 +1009,6 @@
 "nombre": "Alimenta el Registro Central de Operaciones (EC-01) ", "tareas": [
 {"nombre": "Registrar, reportar y dar trazabilidad a todas las operaciones tributarias, cambiarias, aduaneras y no tributarias registradas contablemente  "}] }] },{
 "nombre": "Otros conceptos, tasas o contribuciones", "funcionalidades": [{ }] },{
-{"nombre": "Registrar, reportar y dar trazabilidad a todas las operaciones tributarias, cambiarias, aduaneras y no tributarias registradas contablemente  "}] }] },{
 "nombre": "Conciliación contable", "funcionalidades": [{
 "nombre": "Con Inventario documentos  (M-07-01)", "tareas": [
 {"nombre": "Conciliación de todos los movimientos registrados en inventario de documentos versus movimientos de cuentas contables "},
