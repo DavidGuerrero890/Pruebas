@@ -1,0 +1,115 @@
+{
+	"modulos": [{
+		
+		"nombre": "M-01 – Atención al Cliente", "modulosPrincipales": [{
+			"nombre": "Look and feel de general" },{
+			"nombre": "Look and feel de Portal transaccional" },{
+			"nombre": "Look and feel de Vista 360" },{
+			"nombre": "Portal Transaccional", "submodulos": [{
+				"nombre": "Mi perfil de usuario", "funcionalidades": [{
+					"nombre": "Registro de usuarios", "tareas": [
+						{"nombre": "Creación de usuarios"},
+						{"nombre": "Validación de datos de identidad"}] },{
+					"nombre": "Seguridad", "tareas": [
+						{"nombre": "Gestión de contraseña"},
+						{"nombre": "Gestionar token de seguridad  - firma"}] },{
+					"nombre": "Configuración", "tareas": [
+						{"nombre": "Preferencias - Foto de perfil"},
+						{"nombre": "Personalización de experiencia de usuario de acuerdo al protocolo de relacionamiento con el ciudadano y la información de registro"}] }] },{
+				"nombre": "Trámites y Servicios TACI", "funcionalidades": [{
+					"nombre": "Frame de acceso a trámites", "tareas": [
+						{"nombre": "Listar trámites"}] }] },{
+				"nombre": "Canales de Atención", "funcionalidades": [{
+					"nombre": "Agendamiento de cita presencial/virtual", "tareas": [
+						{"nombre": "Solicitar cita"},
+						{"nombre": "Consultar "},
+						{"nombre": "Modificar/cancelar citas"},
+						{"nombre": "Notificación citas"},
+						{"nombre": "Turno Virtual web"},
+						{"nombre": "Video atención programada"}] },{
+					"nombre": "Llamada telefónica", "tareas": [
+						{"nombre": "Botón de acceso a llamada en línea"}] },{
+					"nombre": "Devolución de llamada", "tareas": [
+						{"nombre": "Formulario de solicitud de devolución de llamada"}] },{
+					"nombre": "Video atención", "tareas": [
+						{"nombre": "Botón de acceso a video atención inmediata"}] },{
+					"nombre": "Chat de asistencia IA", "tareas": [
+						{"nombre": "Atención en lenguaje natural"}] },{
+					"nombre": "Chat-web con funcionario", "tareas": [
+						{"nombre": "Boton de chatweb o whatsapp"}] },{
+					"nombre": "Redes sociales", "tareas": [
+						{"nombre": "Botones de acceso"}] },{
+					"nombre": "Medición de la satisfacción del ciudadano", "tareas": [
+						{"nombre": "Calificación del servicio"}] }] },{
+				"nombre": "PQSRD", "funcionalidades": [{
+					"nombre": "Radicación", "tareas": [
+						{"nombre": "Formulario diligenciamiento"}] },{
+					"nombre": "Consulta", "tareas": [
+						{"nombre": "Consulta de PQSRD radicadas"}] },{
+					"nombre": "Ampliación o aclaración", "tareas": [
+						{"nombre": "Ampliación o aclaración de la PQSRD"}] },{
+					"nombre": "Desistimiento expreso", "tareas": [
+						{"nombre": "Desistimiento expreso"}] },{
+					"nombre": "Notificación y/o alertas", "tareas": [
+						{"nombre": "Panel notificación de comunicaciones y formatos emitidos por el sistema de PQSRD"}] }] },{
+				"nombre": "Expedientes", "funcionalidades": [{
+					"nombre": "Expedientes en curso", "tareas": [
+						{"nombre": "Expedientes en curso"}] },{
+					"nombre": "Expedientes Terminados", "tareas": [
+						{"nombre": "Expedientes en terminados"}] },{
+					"nombre": "Todos los Expedientes", "tareas": [
+						{"nombre": "Expedientes en curso"}] }] },{
+				"nombre": "Buzón Electrónico", "funcionalidades": [{
+					"nombre": "Bandeja de Entrada", "tareas": [
+						{"nombre": "Bandeja de Entrada"}] },{
+					"nombre": "Bandeja de Salida", "tareas": [
+						{"nombre": "Bandeha de salida"}] },{
+					"nombre": "Notificaciones", "tareas": [
+						{"nombre": "Notificaciones"}] }] },{
+				"nombre": "Frames transversales", "funcionalidades": [{
+					"nombre": "Frame acceso a módulos NSGT", "tareas": [
+						{"nombre": "Frame acceso a módulos NSGT"}] },{
+					"nombre": "Frame Saldo y Fecha de pago", "tareas": [
+						{"nombre": "Frame Saldo y Fecha de pago"}] },{
+					"nombre": "Frame Terceros vinculados", "tareas": [
+						{"nombre": "Frame Terceros vinculados"}] },{
+					"nombre": "Frame Estadísticas", "tareas": [
+						{"nombre": "Frame Estadísticas"}] },{
+					"nombre": "Identificación del Ciudadano", "tareas": [
+						{"nombre": "Identificación del Ciudadano"}] },{
+					"nombre": "Buscador", "tareas": [
+						{"nombre": "Buscador"}] }] },{
+				"nombre": "Consultas de su interés", "funcionalidades": [{
+					"nombre": "Mis Facturas Electrónicas", "tareas": [
+						{"nombre": "Mis Facturas Electrónicas"}] },{
+					"nombre": "Confirmación correo DIAN", "tareas": [
+						{"nombre": "Confirmación correo DIAN"}] },{
+					"nombre": "Información Exogena", "tareas": [
+						{"nombre": "Información Exogena"}] }] },{
+				"nombre": "Cultura tributaria ", "funcionalidades": [{
+					"nombre": "Nucleo de Apoyo contable y  fiscal ", "tareas": [
+						{"nombre": "Ingreso al modulo de Cultura Tributaria "}] },{
+					"nombre": "Contenido Interactivo ", "tareas": [
+						{"nombre": "Ingreso a los juegos interactivos "}]
+				}]
+			}]
+		}]			
+		
+	}]
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
