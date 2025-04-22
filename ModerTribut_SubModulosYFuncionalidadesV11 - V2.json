@@ -1180,8 +1180,11 @@
 {"nombre": "Integración con módulos de auditoría y fiscalización"},
 {"nombre": "Transferencia de casos críticos a áreas legales"}] },{
 "nombre": "Visualización y toma de decisiones estratégicas", "tareas": [
+{"nombre": "Panel de control ejecutivo"}] }] }] },{
 "nombre": "M-09 – Riesgos", "modulosPrincipales": [{
-"nombre": "Gestión de Riesgos" },{
+"nombre": "Gestión de Riesgos", "submodulos": [{
+"nombre": "-", "funcionalidades": [{
+"nombre": "-", "tareas": [ ] }] },{
 "nombre": "M-10 – Gestión de Fiscalización TACI", "modulosPrincipales": [{
 "nombre": "Fiscalización", "submodulos": [{
 "nombre": "Selector", "funcionalidades": [{
