@@ -2,12 +2,9 @@
 	"modulos": [{
 		
 		"nombre": "M-01 – Atención al Cliente", "modulosPrincipales": [{
-			"nombre": "Look and feel de general", "submodulos": [{
-			 }] },{
-			"nombre": "Look and feel de Portal transaccional", "submodulos": [{
-			 }] },{
-			"nombre": "Look and feel de Vista 360", "submodulos": [{
-			 }] },{
+			"nombre": "Look and feel de general" },{
+			"nombre": "Look and feel de Portal transaccional" },{
+			"nombre": "Look and feel de Vista 360" },{
 			"nombre": "Portal Transaccional", "submodulos": [{
 				"nombre": "Mi perfil de usuario", "funcionalidades": [{
 					"nombre": "Registro de usuarios", "tareas": [
