@@ -212,7 +212,7 @@
 {"nombre": "Grabación de transacciones"}] },{
 "nombre": "Vista unificada ciudadano - Historico", "tareas": [
 {"nombre": "Vista unificada del ciudadano - Historico intetacciones"}] }] },{
-"nombre": "Frames módulos NSGTA", "funcionalidades": [{ }] },{
+"nombre": "Frames módulos NSGTA" },{
 "nombre": "Buzón Electrónico", "funcionalidades": [{
 "nombre": "Bandeja de Entrada", "tareas": [
 {"nombre": "Entrada"}] },{
@@ -1008,7 +1008,7 @@
 {"nombre": "Ejecutar proceso de cierres mensuales y cierre anual"}] },{
 "nombre": "Alimenta el Registro Central de Operaciones (EC-01) ", "tareas": [
 {"nombre": "Registrar, reportar y dar trazabilidad a todas las operaciones tributarias, cambiarias, aduaneras y no tributarias registradas contablemente  "}] }] },{
-"nombre": "Otros conceptos, tasas o contribuciones", "funcionalidades": [{ }] },{
+"nombre": "Otros conceptos, tasas o contribuciones" },{
 "nombre": "Conciliación contable", "funcionalidades": [{
 "nombre": "Con Inventario documentos  (M-07-01)", "tareas": [
 {"nombre": "Conciliación de todos los movimientos registrados en inventario de documentos versus movimientos de cuentas contables "},
@@ -1291,16 +1291,10 @@
 {"nombre": "Reportes y estadísticas"}] }] }] }] },{
 "nombre": "M-13 – Actos Jurisdiccionales", "modulosPrincipales": [{
 "nombre": "Actos Jurisdiccionales y Administrativas", "submodulos": [{
-"nombre": "Conciliaciones", "funcionalidades": [{
-"nombre": "1", "tareas": [ ] }] },{
-"nombre": "Procesos Judiciales y Administrativos", "funcionalidades": [{
-"nombre": "1", "tareas": [ ] }] },{
-"nombre": "Proceso Penales", "funcionalidades": [{
-"nombre": "1", "tareas": [ ] }] },{
-"nombre": "Acciones  Constitucionales ", "funcionalidades": [{
-"nombre": "1", "tareas": [ ] }] },{
-"nombre": "Autogestión", "funcionalidades": [{
-"nombre": "1", "tareas": [ ] }] }] }] },{
+"nombre": "Conciliaciones" },{
+"nombre": "Procesos Judiciales y Administrativos" },{
+"nombre": "Proceso Penales" },{
+"nombre": "Acciones  Constitucionales " },{
 "nombre": "M-14 – Gestión y Apoyo Jurídico", "modulosPrincipales": [{
 "nombre": "Gestión y Apoyo Jurídico" }] },{
 "nombre": "M-15 – Planeación Tributaria", "modulosPrincipales": [{
@@ -1456,8 +1450,8 @@
 "nombre": "Registro Central de Operaciones", "submodulos": [{
 "nombre": "EC-01-01 Registro Central digital", "funcionalidades": [{
 "nombre": "Diseño de Estructura de Datos", "tareas": [ ] }] },{
-"nombre": "EC-01-02 Expediente Digital", "funcionalidades": [{ }] },{
+"nombre": "EC-01-02 Expediente Digital" },{
 "nombre": "EC-01-03 Consumo de información", "funcionalidades": [{
 "nombre": "Reportes", "tareas": [ ] }] },{
-"nombre": "EC-01-03 Trazabilidad", "funcionalidades": [{ }] }] }]
+"nombre": "EC-01-03 Trazabilidad" }] }]
 }] }
