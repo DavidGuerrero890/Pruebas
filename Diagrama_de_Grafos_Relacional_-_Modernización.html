@@ -36,7 +36,7 @@
         /* Estilo de la Tabla lateral Izquierdo y Modulos y Integrantes */
         #table-container {
             margin-top: 10px; /* Espacio entre el grafo y la tabla */
-            margin-bottom: 150px; /* Espacio entre la tabla y el footer */
+            margin-bottom: 30px; /* Espacio entre la tabla y el footer */
             padding: 20px;
             background-color: #f9f9f9;
             display: flex;
@@ -56,7 +56,32 @@
             text-align: left;
         }
         
-        /* Estilo de la Tabla lateral Izquierdo al dar clic en cualquier Modulo */
+        
+        /* Contenedor: igual que #table-container */
+        #hierarchy-table-container {
+            margin-top: 0px; /* Espacio entre el grafo y la tabla */
+            margin-bottom: 170px; /* Espacio entre la tabla y el footer */
+            padding: 20px;
+            background-color: #f9f9f9;
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Centrar horizontalmente */
+            justify-content: flex-start;
+            width: 100%;
+        }
+        #hierarchicalTable td, 
+        #hierarchicalTable th {
+            text-align: left !important; /* Forzar alineación a la izquierda */
+            vertical-align: top; /* Evita que el texto se centre verticalmente */
+            padding: 8px; /* Espacio interno para mejor presentación */
+        }
+        #hierarchicalTable td div {
+            display: block; /* Asegurar que cada nodo se muestre en una nueva línea */
+            text-align: left;
+        }
+        
+        
+        /* Estilo de la Tabla lateral Izquierda al dar clic en cualquier Modulo */
         .selectable {
             cursor: pointer;
         }
@@ -65,6 +90,7 @@
             font-weight: bold;
         }
         
+        
     </style>
     
 </head>
@@ -72,7 +98,7 @@
     
     <!-- Titulo de la Pagina Web -->
     <header style="text-align: center; padding: 2px; background: #f4f4f4; position: fixed; top: 0; width: 100%; z-index: 1000;">
-        <h1>Diagrama de Grafos Relacional - Modernización Tributaria - V1.1 - 03/04/2025</h1>
+        <h1>Diagrama de Grafos Relacional - Modernización Tributaria - V1.1 - 22/04/2025</h1>
     </header>
     
     <!-- Estilo del Tooltip -->
@@ -115,6 +141,7 @@
         console.log ("Inicializando Script")
 
         urlModulosLinks = "https://raw.githubusercontent.com/DavidGuerrero890/Pruebas/refs/heads/main/ModerTribut_ModulosYLinksV11.json"
+        //urlModulosLinks = "ModerTribut_ModulosYLinksV11.json"
 
         d3.json(urlModulosLinks).then(function(data){
 
@@ -242,6 +269,7 @@
                 changeNodeAndLinkColors(d)
                 event.stopPropagation()
                 actualizarTabla(d);
+                mostrarJerarquiaPorModulo(d.id);
                 event.stopPropagation();
             });
             
@@ -297,6 +325,94 @@
                         <td style="text-align: center;">${hitos || "<div>Ninguno</div>"}</td>
                     `);
             }
+            
+            // Actualizar el contenido de la Tabla de Jerarquias
+            function mostrarJerarquiaPorModulo(nombreModuloSeleccionado) {
+            d3.json('https://raw.githubusercontent.com/DavidGuerrero890/Pruebas/refs/heads/main/ModerTribut_SubModulosYFuncionalidadesV11.json')
+                .then(function(data) {
+                  const tbody = d3.select('#hierarchicalTable tbody');
+                  tbody.html('');
+
+                  const modulo = data.modulos.find(m => m.nombre === nombreModuloSeleccionado);
+                  if (!modulo) return;
+
+                  modulo.modulosPrincipales.forEach(mp => {
+                    const submodulos = mp.submodulos ?? [];
+
+                    // Caso 1: El módulo no tiene submódulos o submódulos vacíos
+                    if (submodulos.length === 0 || submodulos.every(sm => Object.keys(sm).length === 0)) {
+                      const row = tbody.append('tr');
+                      row.append('td').text(mp.nombre);
+                      row.append('td').text('—');
+                      row.append('td').text('—');
+                      row.append('td').text('—');
+                      return;
+                    }
+
+                    // Caso 2: Módulo con submódulos
+                    const tareasModulo = submodulos
+                      .flatMap(sm => sm.funcionalidades ?? [])
+                      .flatMap(f => f.tareas ?? [])
+                      .length;
+
+                    let mpImpreso = false;
+
+                    submodulos.forEach(sm => {
+                      const nombreSubmodulo = sm.nombre ?? '—';
+                      const funcionalidades = sm.funcionalidades ?? [];
+                      const tareasSub = funcionalidades.flatMap(f => f.tareas ?? []).length;
+
+                      // Caso 2.1: submódulo sin funcionalidades
+                      if (funcionalidades.length === 0) {
+                        const row = tbody.append('tr');
+
+                        if (!mpImpreso) {
+                          row.append('td').text(mp.nombre).attr('rowspan', 1);
+                          mpImpreso = true;
+                        }
+
+                        row.append('td').text(nombreSubmodulo);
+                        row.append('td').text('—');
+                        row.append('td').text('—');
+                        return;
+                      }
+
+                      let smImpreso = false;
+
+                      funcionalidades.forEach(f => {
+                        const tareas = f.tareas ?? [];
+                        const tareasNombres = tareas.map(t => t.nombre ?? '—');
+                        let fImpreso = false;
+
+                        tareasNombres.forEach(tareaNombre => {
+                          const row = tbody.append('tr');
+
+                          if (!mpImpreso) {
+                            row.append('td').text(mp.nombre).attr('rowspan', tareasModulo);
+                            mpImpreso = true;
+                          }
+
+                          if (!smImpreso) {
+                            row.append('td').text(nombreSubmodulo).attr('rowspan', tareasSub);
+                            smImpreso = true;
+                          }
+
+                          if (!fImpreso) {
+                            row.append('td').text(f.nombre).attr('rowspan', tareasNombres.length);
+                            fImpreso = true;
+                          }
+
+                          row.append('td').text(tareaNombre);
+                        });
+                      });
+                    });
+                  });
+                });
+            }
+            
+            
+            
+            
             
             function agregarEventosSeleccion() {
                 // Seleccionamos solo los elementos de la tabla lateral izquierda
@@ -389,7 +505,8 @@
                     return originalLinkColors['${d.source.id}-${d.target.id}']
                 });
                 // Limpiar la tabla al hacer clic fuera de los nodos
-                d3.select("#nodeTable tbody").html(""); 
+                d3.select("#nodeTable tbody").html("");
+                d3.select("#hierarchicalTable tbody").html("");
             })
             
             // Definimos función onTick
@@ -462,6 +579,7 @@
                             // Llamar funciones adicionales
                             changeNodeAndLinkColors(node); // Resaltar nodos y enlaces
                             actualizarTabla(node); // Actualizar la tabla de relaciones
+                            mostrarJerarquiaPorModulo(node.id);
                         });
                 });
             }
@@ -492,6 +610,25 @@
             <tbody></tbody>
         </table>
     </div>
+    
+    <!-- Tabla Jerárquica de Módulos, Submódulos, Funcionalidades y Tareas -->
+    <div id="hierarchy-table-container" style="text-align: center; padding:10px; background:#f4f4f4; bottom: 0; width: 100%;">
+      <h2>Módulos Principales, Submódulos, Funcionalidades y Tareas</h2>
+        <table id="hierarchicalTable" border="1">
+          <thead>
+            <tr>
+              <th>Módulos Principales</th>
+              <th>Submódulos</th>
+              <th>Funcionalidades</th>
+              <th>Tareas</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+    </div>
+    
+    
+    
     
     <!-- Acerca de y Agradecimientos -->
     <footer style="text-align: center; padding: 2px; background: #f4f4f4; position: fixed; bottom: 0; width: 100%;">
@@ -532,6 +669,7 @@
     <!-- Script que llena la Tabla de Integrantes en los Modulos -->
     <script>
         urlModulosIntegrantes = "https://raw.githubusercontent.com/DavidGuerrero890/Pruebas/refs/heads/main/ModerTribut_ModulosYIntegrantesV11.json"
+	//urlModulosIntegrantes = "ModerTribut_ModulosYIntegrantesV11.json"
         
         document.getElementById("showTableBtn").addEventListener("click", function () {
             const urlJson = urlModulosIntegrantes;
