@@ -4702,7 +4702,7 @@
                             "nombre": "Conciliaciones",
                             "funcionalidades": [
                                 {
-                                    "nombre": "-",
+                                    "nombre": "1",
                                     "tareas": [
                                     ]
                                 }
@@ -4712,7 +4712,7 @@
                             "nombre": "Procesos Judiciales y Administrativos",
                             "funcionalidades": [
                                 {
-                                    "nombre": "-",
+                                    "nombre": "1",
                                     "tareas": [
                                     ]
                                 }
@@ -4722,7 +4722,7 @@
                             "nombre": "Proceso Penales",
                             "funcionalidades": [
                                 {
-                                    "nombre": "-",
+                                    "nombre": "1",
                                     "tareas": [
                                     ]
                                 }
@@ -4732,7 +4732,7 @@
                             "nombre": "Acciones  Constitucionales ",
                             "funcionalidades": [
                                 {
-                                    "nombre": "-",
+                                    "nombre": "1",
                                     "tareas": [
                                     ]
                                 }
@@ -4742,7 +4742,7 @@
                             "nombre": "Autogestión",
                             "funcionalidades": [
                                 {
-                                    "nombre": "-",
+                                    "nombre": "1",
                                     "tareas": [
                                     ]
                                 }
@@ -5322,7 +5322,7 @@
             ]
         },
         {
-            "nombre": "EC-01",
+            "nombre": "EC-01 – Registro Central de Operaciones",
             "modulosPrincipales": [
                 {
                     "nombre": "Registro Central de Operaciones",
