@@ -4,13 +4,58 @@
             "nombre": "M-01 – Atención al Cliente",
             "modulosPrincipales": [
                 {
-                    "nombre": "Look and feel de general"
+                    "nombre": "Look and feel de general",
+                    "submodulos": [
+                        {
+                            "nombre": "-",
+                            "funcionalidades": [
+                                {
+                                    "nombre": "-",
+                                    "tareas": [
+                                        {
+                                            "nombre": "-"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
                 },
                 {
-                    "nombre": "Look and feel de Portal transaccional"
+                    "nombre": "Look and feel de Portal transaccional",
+                    "submodulos": [
+                        {
+                            "nombre": "-",
+                            "funcionalidades": [
+                                {
+                                    "nombre": "-",
+                                    "tareas": [
+                                        {
+                                            "nombre": "-"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
                 },
                 {
-                    "nombre": "Look and feel de Vista 360"
+                    "nombre": "Look and feel de Vista 360",
+                    "submodulos": [
+                        {
+                            "nombre": "-",
+                            "funcionalidades": [
+                                {
+                                    "nombre": "-",
+                                    "tareas": [
+                                        {
+                                            "nombre": "-"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
                 },
                 {
                     "nombre": "Portal Transaccional",
@@ -76,7 +121,7 @@
                                             "nombre": "Solicitar cita"
                                         },
                                         {
-                                            "nombre": "Consultar "
+                                            "nombre": "Consultar"
                                         },
                                         {
                                             "nombre": "Modificar/cancelar citas"
@@ -336,21 +381,21 @@
                             ]
                         },
                         {
-                            "nombre": "Cultura tributaria ",
+                            "nombre": "Cultura tributaria",
                             "funcionalidades": [
                                 {
-                                    "nombre": "Nucleo de Apoyo contable y  fiscal ",
+                                    "nombre": "Nucleo de Apoyo contable y  fiscal",
                                     "tareas": [
                                         {
-                                            "nombre": "Ingreso al modulo de Cultura Tributaria "
+                                            "nombre": "Ingreso al modulo de Cultura Tributaria"
                                         }
                                     ]
                                 },
                                 {
-                                    "nombre": "Contenido Interactivo ",
+                                    "nombre": "Contenido Interactivo",
                                     "tareas": [
                                         {
-                                            "nombre": "Ingreso a los juegos interactivos "
+                                            "nombre": "Ingreso a los juegos interactivos"
                                         }
                                     ]
                                 }
@@ -365,7 +410,7 @@
                             "nombre": "Canales de Atención",
                             "funcionalidades": [
                                 {
-                                    "nombre": "Llamada telefonica en linea (web) o desde las lineas institucionales - Entrada ",
+                                    "nombre": "Llamada telefonica en linea (web) o desde las lineas institucionales - Entrada",
                                     "tareas": [
                                         {
                                             "nombre": "AudioTexto"
@@ -388,7 +433,7 @@
                                     "nombre": "Llamada telefonica en linea (web) o desde las lineas institucionales - Salida",
                                     "tareas": [
                                         {
-                                            "nombre": "Visualización y configuración "
+                                            "nombre": "Visualización y configuración"
                                         },
                                         {
                                             "nombre": "Segmentación y Gestión de Contactos"
@@ -470,7 +515,7 @@
                                     ]
                                 },
                                 {
-                                    "nombre": "WhatsApp empresarial  ",
+                                    "nombre": "WhatsApp empresarial",
                                     "tareas": [
                                         {
                                             "nombre": "Comunicación WhatsApp / chatweb"
@@ -478,10 +523,10 @@
                                     ]
                                 },
                                 {
-                                    "nombre": "Mensajes de voz o audio automáticos ",
+                                    "nombre": "Mensajes de voz o audio automáticos",
                                     "tareas": [
                                         {
-                                            "nombre": "Mensajes de voz o audio automáticos "
+                                            "nombre": "Mensajes de voz o audio automáticos"
                                         }
                                     ]
                                 },
@@ -688,7 +733,7 @@
                             "nombre": "Mis tareas (reporte de gestión)",
                             "funcionalidades": [
                                 {
-                                    "nombre": "Consulta de expedientes asignados ",
+                                    "nombre": "Consulta de expedientes asignados",
                                     "tareas": [
                                         {
                                             "nombre": "Consulta expedientes"
@@ -725,7 +770,7 @@
                             "nombre": "Mi perfil de usuario",
                             "funcionalidades": [
                                 {
-                                    "nombre": "Seguridad ",
+                                    "nombre": "Seguridad",
                                     "tareas": [
                                         {
                                             "nombre": "Gestión de contraseña"
@@ -745,7 +790,7 @@
                                             "nombre": "Personalización"
                                         },
                                         {
-                                            "nombre": "Mensajes y notificaciones "
+                                            "nombre": "Mensajes y notificaciones"
                                         }
                                     ]
                                 }
@@ -779,7 +824,7 @@
                                     "nombre": "Plataforma omnicanal",
                                     "tareas": [
                                         {
-                                            "nombre": "Identificación y verificación "
+                                            "nombre": "Identificación y verificación"
                                         },
                                         {
                                             "nombre": "Gestión de Interacciones"
@@ -821,7 +866,7 @@
                             "nombre": "Frames módulos NSGTA",
                             "funcionalidades": [
                                 {
-                                    "nombre": "-",
+                                    "nombre": "Vista unificada ciudadano - Historico",
                                     "tareas": [
                                         {
                                             "nombre": "-"
@@ -961,7 +1006,7 @@
                                     "nombre": "Autenticación",
                                     "tareas": [
                                         {
-                                            "nombre": "Gestor de Identidad "
+                                            "nombre": "Gestor de Identidad"
                                         }
                                     ]
                                 },
@@ -993,7 +1038,7 @@
                                     "nombre": "Autenticación",
                                     "tareas": [
                                         {
-                                            "nombre": "Gestor de Identidad "
+                                            "nombre": "Gestor de Identidad"
                                         }
                                     ]
                                 },
@@ -1073,7 +1118,20 @@
                                         },
                                         {
                                             "nombre": "Sin datos Maestros"
-                                        },
+                                        }
+                                    ]
+                                },
+                                {
+                                    "nombre": "Acceder a declaración de viajeros sin inscripción en el Registro",
+                                    "tareas": [
+                                        {
+                                            "nombre": "Sin datos Maestros"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "nombre": "Precargar información del módulo de Registro",
+                                    "tareas": [
                                         {
                                             "nombre": "Reportes"
                                         },
@@ -1102,7 +1160,7 @@
                                     "nombre": "Formulario 110  - Renta y complementario para personas jurídicas",
                                     "tareas": [
                                         {
-                                            "nombre": "Diligenciamiento - Sugerida "
+                                            "nombre": "Diligenciamiento - Sugerida"
                                         },
                                         {
                                             "nombre": "Verificación presentación formato conciliación fiscal"
@@ -1121,6 +1179,9 @@
                                         },
                                         {
                                             "nombre": "Presentación"
+                                        },
+                                        {
+                                            "nombre": "Declaración de corrección y declaración extemporanea y cálculo de sanciones"
                                         },
                                         {
                                             "nombre": "Generar Recibo de Pago"
@@ -1162,6 +1223,9 @@
                                             "nombre": "Presentación"
                                         },
                                         {
+                                            "nombre": "Declaración de corrección y declaración extemporanea y cálculo de sanciones"
+                                        },
+                                        {
                                             "nombre": "Generar Recibo de Pago"
                                         },
                                         {
@@ -1201,6 +1265,9 @@
                                             "nombre": "Presentación"
                                         },
                                         {
+                                            "nombre": "Declaración de corrección y declaración extemporanea y cálculo de sanciones"
+                                        },
+                                        {
                                             "nombre": "Generar Recibo de Pago"
                                         }
                                     ]
@@ -1209,7 +1276,7 @@
                                     "nombre": "Formulario 210 - Renta Personas Naturales",
                                     "tareas": [
                                         {
-                                            "nombre": "Diligenciamiento - Sugerida "
+                                            "nombre": "Diligenciamiento - Sugerida"
                                         },
                                         {
                                             "nombre": "Verificación presentación formato conciliación fiscal"
@@ -1241,6 +1308,9 @@
                                         },
                                         {
                                             "nombre": "Presentación"
+                                        },
+                                        {
+                                            "nombre": "Declaración de corrección y declaración extemporanea y cálculo de sanciones"
                                         },
                                         {
                                             "nombre": "Generar Recibo de Pago"
@@ -1285,6 +1355,9 @@
                                             "nombre": "Presentación"
                                         },
                                         {
+                                            "nombre": "Declaración de corrección y declaración extemporanea y cálculo de sanciones"
+                                        },
+                                        {
                                             "nombre": "Generar Recibo de Pago"
                                         }
                                     ]
@@ -1312,6 +1385,9 @@
                                         },
                                         {
                                             "nombre": "Presentación"
+                                        },
+                                        {
+                                            "nombre": "Declaración de corrección y declaración extemporanea y cálculo de sanciones"
                                         },
                                         {
                                             "nombre": "Generar Recibo de Pago"
@@ -1343,6 +1419,9 @@
                                             "nombre": "Presentación"
                                         },
                                         {
+                                            "nombre": "Declaración de corrección y declaración extemporanea y cálculo de sanciones"
+                                        },
+                                        {
                                             "nombre": "Generar Recibo de Pago"
                                         }
                                     ]
@@ -1370,6 +1449,9 @@
                                         },
                                         {
                                             "nombre": "Presentación"
+                                        },
+                                        {
+                                            "nombre": "Declaración de corrección y declaración extemporanea y cálculo de sanciones"
                                         },
                                         {
                                             "nombre": "Generar Recibo de Pago"
@@ -1401,6 +1483,9 @@
                                             "nombre": "Presentación"
                                         },
                                         {
+                                            "nombre": "Declaración de corrección y declaración extemporanea y cálculo de sanciones"
+                                        },
+                                        {
                                             "nombre": "Generar Recibo de Pago"
                                         }
                                     ]
@@ -1427,6 +1512,9 @@
                                             "nombre": "Presentación"
                                         },
                                         {
+                                            "nombre": "Declaración de corrección y declaración extemporanea y cálculo de sanciones"
+                                        },
+                                        {
                                             "nombre": "Generar Recibo de Pago"
                                         }
                                     ]
@@ -1438,7 +1526,7 @@
                                             "nombre": "Diligenciamiento - Inclusion"
                                         },
                                         {
-                                            "nombre": "Diligenciamiento - Sugerida"
+                                            "nombre": "Diligenciamiento -Sugerida"
                                         },
                                         {
                                             "nombre": "Diligenciamiento - Incial"
@@ -1459,6 +1547,9 @@
                                             "nombre": "Presentación"
                                         },
                                         {
+                                            "nombre": "Declaración de corrección y declaración extemporanea y cálculo de sanciones"
+                                        },
+                                        {
                                             "nombre": "Generar Recibo de Pago"
                                         }
                                     ]
@@ -1470,10 +1561,13 @@
                                             "nombre": "Diligenciamiento - Inclusion"
                                         },
                                         {
-                                            "nombre": "Diligenciamiento - Incial"
+                                            "nombre": "Diligenciamiento - Inicial"
                                         },
                                         {
                                             "nombre": "Liquidación"
+                                        },
+                                        {
+                                            "nombre": "Guardar borrador y asignar CUI"
                                         },
                                         {
                                             "nombre": "Firma Declaración"
@@ -1482,7 +1576,7 @@
                                             "nombre": "Presentación"
                                         },
                                         {
-                                            "nombre": "Generar Recibo de Pago"
+                                            "nombre": "Declaración de corrección y declaración extemporanea y cálculo de sanciones"
                                         }
                                     ]
                                 },
@@ -1506,6 +1600,9 @@
                                         },
                                         {
                                             "nombre": "Presentación"
+                                        },
+                                        {
+                                            "nombre": "Declaración de corrección y declaración extemporanea y cálculo de sanciones"
                                         },
                                         {
                                             "nombre": "Generar Recibo de Pago"
@@ -1534,6 +1631,9 @@
                                             "nombre": "Presentación"
                                         },
                                         {
+                                            "nombre": "Declaración de corrección y declaración extemporanea y cálculo de sanciones"
+                                        },
+                                        {
                                             "nombre": "Generar Recibo de Pago"
                                         }
                                     ]
@@ -1560,6 +1660,9 @@
                                             "nombre": "Presentación"
                                         },
                                         {
+                                            "nombre": "Declaración de corrección y declaración extemporanea y cálculo de sanciones"
+                                        },
+                                        {
                                             "nombre": "Generar Recibo de Pago"
                                         }
                                     ]
@@ -1584,6 +1687,9 @@
                                         },
                                         {
                                             "nombre": "Presentación"
+                                        },
+                                        {
+                                            "nombre": "Declaración de corrección y declaración extemporanea y cálculo de sanciones"
                                         },
                                         {
                                             "nombre": "Generar Recibo de Pago"
@@ -1701,7 +1807,7 @@
                                             "nombre": "Firma DUA"
                                         },
                                         {
-                                            "nombre": "Alerta Fiscalización "
+                                            "nombre": "Alerta Fiscalización"
                                         }
                                     ]
                                 },
@@ -1739,7 +1845,7 @@
                                             "nombre": "Autorización de Entraga del Equipaje"
                                         },
                                         {
-                                            "nombre": "Alerta Fiscalización "
+                                            "nombre": "Alerta Fiscalización"
                                         }
                                     ]
                                 },
@@ -1777,7 +1883,7 @@
                                             "nombre": "Levante"
                                         },
                                         {
-                                            "nombre": "Alerta Fiscalización "
+                                            "nombre": "Alerta Fiscalización"
                                         }
                                     ]
                                 },
@@ -1841,7 +1947,7 @@
                                             "nombre": "Firma DUA"
                                         },
                                         {
-                                            "nombre": "Alerta Fiscalización "
+                                            "nombre": "Alerta Fiscalización"
                                         }
                                     ]
                                 },
@@ -1888,7 +1994,16 @@
                                             "nombre": "Firma Declaración"
                                         },
                                         {
-                                            "nombre": "Presentación"
+                                            "nombre": "Presentación inicial de la declaración"
+                                        },
+                                        {
+                                            "nombre": "Presentación declaración de corrección y declaración extemporánea"
+                                        },
+                                        {
+                                            "nombre": "Presentacion declaración fraccion de año"
+                                        },
+                                        {
+                                            "nombre": "Presentación declaración de corrección y declaración extemporánea"
                                         },
                                         {
                                             "nombre": "Generar Recibo de Pago"
@@ -1931,6 +2046,25 @@
                                             "nombre": "Guardar borrador y asignar CUI"
                                         },
                                         {
+                                            "nombre": "Cargue de archivos"
+                                        },
+                                        {
+                                            "nombre": "Firma Declaración"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "nombre": "Formulario 150",
+                                    "tareas": [
+                                        {
+                                            "nombre": "Presentación"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "nombre": "Formulario 2573",
+                                    "tareas": [
+                                        {
                                             "nombre": "Documentos Soportes"
                                         }
                                     ]
@@ -1966,7 +2100,7 @@
                                             "nombre": "Diligenciamiento - Borrador"
                                         },
                                         {
-                                            "nombre": "Diligenciamiento"
+                                            "nombre": "Diligenciamiento del contribuyente"
                                         },
                                         {
                                             "nombre": "Liquidación"
@@ -1975,19 +2109,22 @@
                                             "nombre": "Guardar borrador y asignar CUI"
                                         },
                                         {
-                                            "nombre": "Firma Declaración"
-                                        },
-                                        {
-                                            "nombre": "Presentación"
+                                            "nombre": "Guardar borrador definitivo"
                                         },
                                         {
                                             "nombre": "Generar Recibo de Pago"
+                                        },
+                                        {
+                                            "nombre": "Ajustes a los recibos electrónicos SIMPLE"
                                         }
                                     ]
                                 },
                                 {
                                     "nombre": "Formulario 260",
                                     "tareas": [
+                                        {
+                                            "nombre": "Validación de presentación y pago previo de los recibos bimestrales y cargue de la información"
+                                        },
                                         {
                                             "nombre": "Diligenciamiento - Borrador"
                                         },
@@ -2005,6 +2142,9 @@
                                         },
                                         {
                                             "nombre": "Presentación"
+                                        },
+                                        {
+                                            "nombre": "Declaración de corrección y declaración extemporanea y cálculo de sanciones"
                                         },
                                         {
                                             "nombre": "Generar Recibo de Pago"
@@ -2015,10 +2155,10 @@
                                     "nombre": "Formulario 470",
                                     "tareas": [
                                         {
-                                            "nombre": "Diligenciamiento - Borrador"
+                                            "nombre": "Diligenciamiento"
                                         },
                                         {
-                                            "nombre": "Diligenciamiento"
+                                            "nombre": "Diligenciamiento - Inicial"
                                         },
                                         {
                                             "nombre": "Liquidación"
@@ -2033,7 +2173,7 @@
                                             "nombre": "Presentación"
                                         },
                                         {
-                                            "nombre": "Generar Recibo de Pago"
+                                            "nombre": "Declaración de corrección y declaración extemporanea y cálculo de sanciones"
                                         }
                                     ]
                                 },
@@ -2041,10 +2181,10 @@
                                     "nombre": "Formulario 480",
                                     "tareas": [
                                         {
-                                            "nombre": "Diligenciamiento - Borrador"
+                                            "nombre": "Diligenciamiento"
                                         },
                                         {
-                                            "nombre": "Diligenciamiento"
+                                            "nombre": "Diligenciamiento - Inicial"
                                         },
                                         {
                                             "nombre": "Liquidación"
@@ -2059,15 +2199,31 @@
                                             "nombre": "Presentación"
                                         },
                                         {
-                                            "nombre": "Generar Recibo de Pago"
+                                            "nombre": "Declaración de corrección y declaración extemporanea y cálculo de sanciones"
                                         }
                                     ]
                                 },
                                 {
-                                    "nombre": "Formato",
+                                    "nombre": "Formato - Otros conceptos, tasas y obligaciones  Pendiente de la obligatoriedad normativa.",
                                     "tareas": [
                                         {
-                                            "nombre": "Otros conceptos, tasas y obligaciones"
+                                            "nombre": "Facilitación Formato Pendiente de la obligatoriedad normativa."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "nombre": "Datos Maestros",
+                                    "tareas": [
+                                        {
+                                            "nombre": "Precargar los datos maestros a partir de la información consignada en el Registro."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "nombre": "Sin datos Maestros",
+                                    "tareas": [
+                                        {
+                                            "nombre": "Crear alerta para inscripción en Registro"
                                         }
                                     ]
                                 },
@@ -2096,13 +2252,13 @@
                                     ]
                                 },
                                 {
-                                    "nombre": "Formulario 532",
+                                    "nombre": "Formulario 530",
                                     "tareas": [
                                         {
                                             "nombre": "Diligenciamiento"
                                         },
                                         {
-                                            "nombre": "Liquidación"
+                                            "nombre": "Numeración y aceptación de la declaración"
                                         },
                                         {
                                             "nombre": "Firma Declaración"
@@ -2111,13 +2267,57 @@
                                             "nombre": "Presentación"
                                         },
                                         {
-                                            "nombre": "Inspección"
+                                            "nombre": "Prueba de presentación"
                                         },
                                         {
-                                            "nombre": "Alerta Fiscalización "
+                                            "nombre": "Control Declaración NSGA (Viajeros)"
                                         },
                                         {
-                                            "nombre": "Generar Recibo de Pago"
+                                            "nombre": "Alerta Fiscalización"
+                                        },
+                                        {
+                                            "nombre": "Liquidación"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "nombre": "Formulario 532",
+                                    "tareas": [
+                                        {
+                                            "nombre": "Diligenciamiento"
+                                        },
+                                        {
+                                            "nombre": "Cargar documentos soporte"
+                                        },
+                                        {
+                                            "nombre": "Numeración y aceptación de la declaración (Borrador)"
+                                        },
+                                        {
+                                            "nombre": "Validación de términos"
+                                        },
+                                        {
+                                            "nombre": "Liquidación"
+                                        },
+                                        {
+                                            "nombre": "Actualización declaración numerada y aceptada"
+                                        },
+                                        {
+                                            "nombre": "Firma Declaración"
+                                        },
+                                        {
+                                            "nombre": "Presentación declaración"
+                                        },
+                                        {
+                                            "nombre": "Prueba de presentación"
+                                        },
+                                        {
+                                            "nombre": "Inspección NSGA - Viajeros"
+                                        },
+                                        {
+                                            "nombre": "Alerta Fiscalización"
+                                        },
+                                        {
+                                            "nombre": "Liquidación"
                                         }
                                     ]
                                 },
@@ -2128,19 +2328,34 @@
                                             "nombre": "Diligenciamiento"
                                         },
                                         {
+                                            "nombre": "Cargar documentos soporte"
+                                        },
+                                        {
+                                            "nombre": "Numeración y aceptación de la declaración (Borrador)"
+                                        },
+                                        {
+                                            "nombre": "Validación de términos"
+                                        },
+                                        {
                                             "nombre": "Liquidación"
+                                        },
+                                        {
+                                            "nombre": "Actualización declaración numerada y aceptada"
                                         },
                                         {
                                             "nombre": "Firma Declaración"
                                         },
                                         {
-                                            "nombre": "Presentación"
+                                            "nombre": "Presentación declaración"
                                         },
                                         {
-                                            "nombre": "Generar Recibo de Pago"
+                                            "nombre": "Prueba de presentación"
                                         },
                                         {
-                                            "nombre": "Alerta Fiscalización "
+                                            "nombre": "Validación de términos"
+                                        },
+                                        {
+                                            "nombre": "Liquidación"
                                         }
                                     ]
                                 },
@@ -2500,7 +2715,7 @@
                                             "nombre": "Envío información solicitud"
                                         },
                                         {
-                                            "nombre": "Recibido "
+                                            "nombre": "Recibido"
                                         },
                                         {
                                             "nombre": "Envío información corregida"
@@ -2565,7 +2780,7 @@
                                             "nombre": "Recurso"
                                         },
                                         {
-                                            "nombre": "Cierre "
+                                            "nombre": "Cierre"
                                         },
                                         {
                                             "nombre": "Reportes"
@@ -2616,7 +2831,7 @@
                                             "nombre": "Recurso"
                                         },
                                         {
-                                            "nombre": "Cierre "
+                                            "nombre": "Cierre"
                                         },
                                         {
                                             "nombre": "Reportes"
@@ -2651,7 +2866,7 @@
                                             "nombre": "Actualizar expediente digital"
                                         },
                                         {
-                                            "nombre": "Reportes estadísticos de la funcionalidad "
+                                            "nombre": "Reportes estadísticos de la funcionalidad"
                                         },
                                         {
                                             "nombre": "Notificación de cumplimiento"
@@ -2787,7 +3002,7 @@
                                     "nombre": "Gestión de títulos",
                                     "tareas": [
                                         {
-                                            "nombre": "Reparto y asignación TDJ (título de depósito Judicial) al proceso "
+                                            "nombre": "Reparto y asignación TDJ (título de depósito Judicial) al proceso"
                                         },
                                         {
                                             "nombre": "Gestión TDJ"
@@ -3086,7 +3301,7 @@
                                     ]
                                 },
                                 {
-                                    "nombre": "Pago de varios impuestos ",
+                                    "nombre": "Pago de varios impuestos",
                                     "tareas": [
                                         {
                                             "nombre": "Aplicar"
@@ -3099,7 +3314,7 @@
                             "nombre": "Declaraciones aduaneras",
                             "funcionalidades": [
                                 {
-                                    "nombre": " Importación diferida",
+                                    "nombre": "Importación diferida",
                                     "tareas": [
                                         {
                                             "nombre": "Registrar"
@@ -3330,7 +3545,7 @@
                                     ]
                                 },
                                 {
-                                    "nombre": "Jurídica sede administrativa- Actos para información ",
+                                    "nombre": "Jurídica sede administrativa- Actos para información",
                                     "tareas": [
                                         {
                                             "nombre": "Registrar"
@@ -3354,7 +3569,7 @@
                                     ]
                                 },
                                 {
-                                    "nombre": "Jurídica sede judicial- Conciliación ",
+                                    "nombre": "Jurídica sede judicial- Conciliación",
                                     "tareas": [
                                         {
                                             "nombre": "Registrar"
@@ -3391,7 +3606,7 @@
                                     ]
                                 },
                                 {
-                                    "nombre": "Modificar ",
+                                    "nombre": "Modificar",
                                     "tareas": [
                                         {
                                             "nombre": "Declaración o recibo de pago a modificar"
@@ -3399,7 +3614,7 @@
                                     ]
                                 },
                                 {
-                                    "nombre": "Gestionar ",
+                                    "nombre": "Gestionar",
                                     "tareas": [
                                         {
                                             "nombre": "Declaración o recibo de pago modificado"
@@ -3407,7 +3622,7 @@
                                     ]
                                 },
                                 {
-                                    "nombre": "Aplicación en sistema ",
+                                    "nombre": "Aplicación en sistema",
                                     "tareas": [
                                         {
                                             "nombre": "Afectación de la declaración o recibo de pago gestionado"
@@ -3461,7 +3676,7 @@
                                             "nombre": "General"
                                         },
                                         {
-                                            "nombre": "Impuesto "
+                                            "nombre": "Impuesto"
                                         },
                                         {
                                             "nombre": "Saldos"
@@ -3497,7 +3712,7 @@
                                     "nombre": "-",
                                     "tareas": [
                                         {
-                                            "nombre": "Otros Conceptos, tasas y contribuciones "
+                                            "nombre": "Otros Conceptos, tasas y contribuciones"
                                         }
                                     ]
                                 }
@@ -3527,7 +3742,7 @@
                     "nombre": "Contabilidad y Conciliaciones",
                     "submodulos": [
                         {
-                            "nombre": "Inventario de documentos ",
+                            "nombre": "Inventario de documentos",
                             "funcionalidades": [
                                 {
                                     "nombre": "Recepción de información demás Módulos Transaccionales",
@@ -3544,7 +3759,7 @@
                                     "nombre": "Consolidación de información",
                                     "tareas": [
                                         {
-                                            "nombre": "Agrupar datos  (Según Datos maestros y transaccionales requeridos) "
+                                            "nombre": "Agrupar datos  (Según Datos maestros y transaccionales requeridos)"
                                         }
                                     ]
                                 },
@@ -3562,7 +3777,7 @@
                             "nombre": "Validación de la información",
                             "funcionalidades": [
                                 {
-                                    "nombre": "Verifica Completitud de información ",
+                                    "nombre": "Verifica Completitud de información",
                                     "tareas": [
                                         {
                                             "nombre": "Validación de fechas (presentación, notificación, ejecutoría)"
@@ -3594,7 +3809,7 @@
                             "nombre": "Contabilidad de ingresos",
                             "funcionalidades": [
                                 {
-                                    "nombre": "Registro y reconocimiento ",
+                                    "nombre": "Registro y reconocimiento",
                                     "tareas": [
                                         {
                                             "nombre": "Aplicar reglas para registro de Saldos Iniciales"
@@ -3603,7 +3818,7 @@
                                             "nombre": "Aplicar Parametrización contable"
                                         },
                                         {
-                                            "nombre": "Pantalla de transición/contingencia "
+                                            "nombre": "Pantalla de transición/contingencia"
                                         }
                                     ]
                                 },
@@ -3624,10 +3839,10 @@
                                     ]
                                 },
                                 {
-                                    "nombre": "Alimenta el Registro Central de Operaciones (EC-01) ",
+                                    "nombre": "Alimenta el Registro Central de Operaciones (EC-01)",
                                     "tareas": [
                                         {
-                                            "nombre": "Registrar, reportar y dar trazabilidad a todas las operaciones tributarias, cambiarias, aduaneras y no tributarias registradas contablemente  "
+                                            "nombre": "Registrar, reportar y dar trazabilidad a todas las operaciones tributarias, cambiarias, aduaneras y no tributarias registradas contablemente"
                                         }
                                     ]
                                 }
@@ -3637,10 +3852,10 @@
                             "nombre": "Otros conceptos, tasas o contribuciones",
                             "funcionalidades": [
                                 {
-                                    "nombre": "-",
+                                    "nombre": "Alimenta el Registro Central de Operaciones (EC-01)",
                                     "tareas": [
                                         {
-                                            "nombre": "-"
+                                            "nombre": "Registrar, reportar y dar trazabilidad a todas las operaciones tributarias, cambiarias, aduaneras y no tributarias registradas contablemente"
                                         }
                                     ]
                                 }
@@ -3653,7 +3868,7 @@
                                     "nombre": "Con Inventario documentos  (M-07-01)",
                                     "tareas": [
                                         {
-                                            "nombre": "Conciliación de todos los movimientos registrados en inventario de documentos versus movimientos de cuentas contables "
+                                            "nombre": "Conciliación de todos los movimientos registrados en inventario de documentos versus movimientos de cuentas contables"
                                         },
                                         {
                                             "nombre": "Conciliación de cantidad de documentos registrados en el inventario de documentos versus cantidad de documentos contabilizados"
@@ -3688,7 +3903,7 @@
                                     "nombre": "Estados Financieros",
                                     "tareas": [
                                         {
-                                            "nombre": "Estado de situación financiera y Estado de Resultados "
+                                            "nombre": "Estado de situación financiera y Estado de Resultados"
                                         }
                                     ]
                                 },
@@ -3712,28 +3927,28 @@
                                             "nombre": "Parametrizar las tablas necesarias para definir condiciones de los documentos con efecto contable"
                                         },
                                         {
-                                            "nombre": "Parametrizar la tabla de consolidación del balance de logística "
+                                            "nombre": "Parametrizar la tabla de consolidación del balance de logística"
                                         }
                                     ]
                                 },
                                 {
-                                    "nombre": "Configuración de los catálogos de cuentas, rubros presupuestales y tipología de comprobantes para SIIF ",
+                                    "nombre": "Configuración de los catálogos de cuentas, rubros presupuestales y tipología de comprobantes para SIIF",
                                     "tareas": [
                                         {
-                                            "nombre": "Parametrizar las tablas para los catálogos  "
+                                            "nombre": "Parametrizar las tablas para los catálogos"
                                         }
                                     ]
                                 },
                                 {
-                                    "nombre": "Configuración  clase de comprobantes contables ",
+                                    "nombre": "Configuración  clase de comprobantes contables",
                                     "tareas": [
                                         {
-                                            "nombre": "Parametrizar las tablas para la clase de Comprobantes contables  "
+                                            "nombre": "Parametrizar las tablas para la clase de Comprobantes contables"
                                         }
                                     ]
                                 },
                                 {
-                                    "nombre": "Configuración dinámica contable ",
+                                    "nombre": "Configuración dinámica contable",
                                     "tareas": [
                                         {
                                             "nombre": "Parametrizar las tablas para la dinámica contable para cada tipo de documento"
@@ -3749,13 +3964,13 @@
                                     ]
                                 },
                                 {
-                                    "nombre": "Configuración de Informes ",
+                                    "nombre": "Configuración de Informes",
                                     "tareas": [
                                         {
                                             "nombre": "Configuración de Estados Financieros"
                                         },
                                         {
-                                            "nombre": "Configuración de comprobantes, libros y auxiliares contables "
+                                            "nombre": "Configuración de comprobantes, libros y auxiliares contables"
                                         },
                                         {
                                             "nombre": "Configuración de informes contables"
@@ -3865,19 +4080,14 @@
                             ]
                         },
                         {
-                            "nombre": "Control Persuasivo ",
+                            "nombre": "Control Persuasivo",
                             "funcionalidades": [
                                 {
-                                    "nombre": "Emisión masiva de comunicaciones ",
+                                    "nombre": "Emisión masiva de comunicaciones",
                                     "tareas": [
                                         {
                                             "nombre": "Recepción de alertas de incumplimiento"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "nombre": " Emisión masiva de comunicaciones ",
-                                    "tareas": [
+                                        },
                                         {
                                             "nombre": "Clasificación y priorización de casos"
                                         },
@@ -3890,7 +4100,7 @@
                                     ]
                                 },
                                 {
-                                    "nombre": " Monitoreo de efectividad de comunicaciones ",
+                                    "nombre": "Monitoreo de efectividad de comunicaciones",
                                     "tareas": [
                                         {
                                             "nombre": "Interacción y negociación con contribuyentes"
@@ -3904,7 +4114,7 @@
                                     ]
                                 },
                                 {
-                                    "nombre": " Gestión de respuestas ",
+                                    "nombre": "Gestión de respuestas",
                                     "tareas": [
                                         {
                                             "nombre": "Generación de reportes y análisis de efectividad"
@@ -3921,7 +4131,7 @@
                                     ]
                                 },
                                 {
-                                    "nombre": " Notificación de acuerdos ",
+                                    "nombre": "Notificación de acuerdos",
                                     "tareas": [
                                         {
                                             "nombre": "Evaluación de satisfacción del contribuyente"
@@ -3938,7 +4148,7 @@
                                     ]
                                 },
                                 {
-                                    "nombre": " Gestión de acuerdos de pago ",
+                                    "nombre": "Gestión de acuerdos de pago",
                                     "tareas": [
                                         {
                                             "nombre": "Generación de reportes y análisis de efectividad"
@@ -3951,10 +4161,10 @@
                             ]
                         },
                         {
-                            "nombre": "Control Intensivo ",
+                            "nombre": "Control Intensivo",
                             "funcionalidades": [
                                 {
-                                    "nombre": " Auditoría y análisis de incumplimientos graves ",
+                                    "nombre": "Auditoría y análisis de incumplimientos graves",
                                     "tareas": [
                                         {
                                             "nombre": "Identificación de contribuyentes con alto riesgo fiscal"
@@ -3980,7 +4190,7 @@
                                     ]
                                 },
                                 {
-                                    "nombre": " Gestión de medidas legales ",
+                                    "nombre": "Gestión de medidas legales",
                                     "tareas": [
                                         {
                                             "nombre": "Aplicación de sanciones administrativas"
@@ -3988,7 +4198,7 @@
                                     ]
                                 },
                                 {
-                                    "nombre": " Implementación de acciones coercitivas ",
+                                    "nombre": "Implementación de acciones coercitivas",
                                     "tareas": [
                                         {
                                             "nombre": "Generación de liquidaciones tributarias"
@@ -4005,7 +4215,7 @@
                                     ]
                                 },
                                 {
-                                    "nombre": " Gestión de medidas legales ",
+                                    "nombre": "Gestión de medidas legales",
                                     "tareas": [
                                         {
                                             "nombre": "Implementación de embargos y medidas cautelares"
@@ -4013,7 +4223,7 @@
                                     ]
                                 },
                                 {
-                                    "nombre": " Generación de informes forenses ",
+                                    "nombre": "Generación de informes forenses",
                                     "tareas": [
                                         {
                                             "nombre": "Registro y actualización de estado de cumplimiento del contribuyente"
@@ -4027,7 +4237,7 @@
                                     ]
                                 },
                                 {
-                                    "nombre": " Monitoreo en tiempo real de casos judiciales ",
+                                    "nombre": "Monitoreo en tiempo real de casos judiciales",
                                     "tareas": [
                                         {
                                             "nombre": "Evaluación de efectividad del proceso de control intensivo"
@@ -4043,7 +4253,7 @@
                             "nombre": "Emisor de Controles",
                             "funcionalidades": [
                                 {
-                                    "nombre": " Emisión automatizada de notificaciones de control ",
+                                    "nombre": "Emisión automatizada de notificaciones de control",
                                     "tareas": [
                                         {
                                             "nombre": "Monitoreo de Incumplimientos a Nivel Global"
@@ -4063,7 +4273,7 @@
                                     ]
                                 },
                                 {
-                                    "nombre": " Envío de alertas por incumplimientos persistentes ",
+                                    "nombre": "Envío de alertas por incumplimientos persistentes",
                                     "tareas": [
                                         {
                                             "nombre": "Interacción para Escalado de Casos a Niveles Superiores"
@@ -4071,7 +4281,7 @@
                                     ]
                                 },
                                 {
-                                    "nombre": " Supervisión de respuestas a los controles ",
+                                    "nombre": "Supervisión de respuestas a los controles",
                                     "tareas": [
                                         {
                                             "nombre": "Registro y Trazabilidad de Notificaciones Emitidas"
@@ -4079,7 +4289,7 @@
                                     ]
                                 },
                                 {
-                                    "nombre": " Reporte de efectividad de controles ",
+                                    "nombre": "Reporte de efectividad de controles",
                                     "tareas": [
                                         {
                                             "nombre": "Generación de Reportes sobre Notificaciones Emitidas"
@@ -4087,7 +4297,7 @@
                                     ]
                                 },
                                 {
-                                    "nombre": " Supervisión de respuestas a los controles ",
+                                    "nombre": "Supervisión de respuestas a los controles",
                                     "tareas": [
                                         {
                                             "nombre": "Seguimiento de Notificaciones para Medidas Correctivas"
@@ -4095,7 +4305,7 @@
                                     ]
                                 },
                                 {
-                                    "nombre": " Envío de alertas por incumplimientos persistentes ",
+                                    "nombre": "Envío de alertas por incumplimientos persistentes",
                                     "tareas": [
                                         {
                                             "nombre": "Interacción con el Sistema de Autenticación"
@@ -4105,10 +4315,10 @@
                             ]
                         },
                         {
-                            "nombre": "Emisor de Liquidaciones ",
+                            "nombre": "Emisor de Liquidaciones",
                             "funcionalidades": [
                                 {
-                                    "nombre": " Generación automatizada de liquidaciones ",
+                                    "nombre": "Generación automatizada de liquidaciones",
                                     "tareas": [
                                         {
                                             "nombre": "Recepción de datos de obligaciones para liquidación"
@@ -4125,7 +4335,7 @@
                                     ]
                                 },
                                 {
-                                    "nombre": " Cálculo de intereses y sanciones ",
+                                    "nombre": "Cálculo de intereses y sanciones",
                                     "tareas": [
                                         {
                                             "nombre": "Preparación de las notificaciones de liquidación"
@@ -4139,7 +4349,7 @@
                                     ]
                                 },
                                 {
-                                    "nombre": " Envío de liquidaciones a contribuyentes ",
+                                    "nombre": "Envío de liquidaciones a contribuyentes",
                                     "tareas": [
                                         {
                                             "nombre": "Monitoreo del estado de cumplimiento"
@@ -4156,7 +4366,7 @@
                                     ]
                                 },
                                 {
-                                    "nombre": " Registro de pagos y liquidaciones ",
+                                    "nombre": "Registro de pagos y liquidaciones",
                                     "tareas": [
                                         {
                                             "nombre": "Registro de liquidaciones en el sistema documental"
@@ -4167,7 +4377,7 @@
                                     ]
                                 },
                                 {
-                                    "nombre": " Generación de reportes de liquidaciones ",
+                                    "nombre": "Generación de reportes de liquidaciones",
                                     "tareas": [
                                         {
                                             "nombre": "Verificación del estado de pago con plataformas bancarias"
@@ -4183,7 +4393,7 @@
                             "nombre": "Torre de Control",
                             "funcionalidades": [
                                 {
-                                    "nombre": " Consolidación de información de submódulos ",
+                                    "nombre": "Consolidación de información de submódulos",
                                     "tareas": [
                                         {
                                             "nombre": "Recopilación de datos de los submódulos"
@@ -4200,7 +4410,7 @@
                                     ]
                                 },
                                 {
-                                    "nombre": " Monitoreo en tiempo real de los casos ",
+                                    "nombre": "Monitoreo en tiempo real de los casos",
                                     "tareas": [
                                         {
                                             "nombre": "Cálculo de métricas de desempeño"
@@ -4214,7 +4424,7 @@
                                     ]
                                 },
                                 {
-                                    "nombre": " Generación de informes de rendimiento ",
+                                    "nombre": "Generación de informes de rendimiento",
                                     "tareas": [
                                         {
                                             "nombre": "Evaluación de impacto de las acciones de control"
@@ -4228,7 +4438,7 @@
                                     ]
                                 },
                                 {
-                                    "nombre": " Alertas proactivas para intervenciones adicionales ",
+                                    "nombre": "Alertas proactivas para intervenciones adicionales",
                                     "tareas": [
                                         {
                                             "nombre": "Configuración de alertas automáticas"
@@ -4242,7 +4452,7 @@
                                     ]
                                 },
                                 {
-                                    "nombre": " Análisis de efectividad de las intervenciones ",
+                                    "nombre": "Análisis de efectividad de las intervenciones",
                                     "tareas": [
                                         {
                                             "nombre": "Integración con el Sistema de Gestión Documental"
@@ -4483,7 +4693,7 @@
                                     "nombre": "Parametrización Fiscalización TACI",
                                     "tareas": [
                                         {
-                                            "nombre": "Administración y control de términos. Otros Conceptos, tasas y contribuciones"
+                                            "nombre": "Administración y control de términos Otros Conceptos, tasas y contribuciones"
                                         },
                                         {
                                             "nombre": "Administrar capacidad operativa"
@@ -4546,7 +4756,7 @@
                                     "nombre": "Radicación recursos y solicitudes del proceso jurídico",
                                     "tareas": [
                                         {
-                                            "nombre": "Recepción interna "
+                                            "nombre": "Recepción interna"
                                         },
                                         {
                                             "nombre": "Crear unidad documental"
@@ -4565,7 +4775,7 @@
                                     ]
                                 },
                                 {
-                                    "nombre": "Reparto y asignación de casos ",
+                                    "nombre": "Reparto y asignación de casos",
                                     "tareas": [
                                         {
                                             "nombre": "Reparto"
@@ -4579,7 +4789,7 @@
                                     "nombre": "Validación de requisitos",
                                     "tareas": [
                                         {
-                                            "nombre": "Verificar requisitos "
+                                            "nombre": "Verificar requisitos"
                                         },
                                         {
                                             "nombre": "Admitir por reposición"
@@ -4603,7 +4813,7 @@
                                             "nombre": "Validar la elaboración de los actos"
                                         },
                                         {
-                                            "nombre": "Cierre y archivo unidad documental "
+                                            "nombre": "Cierre y archivo unidad documental"
                                         }
                                     ]
                                 }
@@ -4619,7 +4829,7 @@
                                             "nombre": "Decisión sobre pruebas"
                                         },
                                         {
-                                            "nombre": "Recurso de reposición cuando se niegan las pruebas "
+                                            "nombre": "Recurso de reposición cuando se niegan las pruebas"
                                         },
                                         {
                                             "nombre": "Confirmar decisión sobre pruebas"
@@ -4631,7 +4841,7 @@
                                             "nombre": "Práctica de pruebas"
                                         },
                                         {
-                                            "nombre": "Cierre etapa probatoria "
+                                            "nombre": "Cierre etapa probatoria"
                                         }
                                     ]
                                 },
@@ -4639,7 +4849,7 @@
                                     "nombre": "Acto de fondo",
                                     "tareas": [
                                         {
-                                            "nombre": "Elaboración acto de fondo "
+                                            "nombre": "Elaboración acto de fondo"
                                         },
                                         {
                                             "nombre": "Revisión acto de fondo"
@@ -4656,7 +4866,7 @@
                                             "nombre": "Revisión en Comité Técnico"
                                         },
                                         {
-                                            "nombre": "Expedición Acto de fondo "
+                                            "nombre": "Expedición Acto de fondo"
                                         }
                                     ]
                                 },
@@ -4753,7 +4963,7 @@
                             ]
                         },
                         {
-                            "nombre": "Acciones  Constitucionales ",
+                            "nombre": "Acciones  Constitucionales",
                             "funcionalidades": [
                                 {
                                     "nombre": "-",
@@ -4874,10 +5084,10 @@
                                     "nombre": "Procesamiento del Pago",
                                     "tareas": [
                                         {
-                                            "nombre": "Habilitar opciones de pago "
+                                            "nombre": "Habilitar opciones de pago"
                                         },
                                         {
-                                            "nombre": " Acuse de pago"
+                                            "nombre": "Acuse de pago"
                                         },
                                         {
                                             "nombre": "Procesar Pago"
@@ -5009,7 +5219,7 @@
                                             "nombre": "Crear"
                                         },
                                         {
-                                            "nombre": "Modificar "
+                                            "nombre": "Modificar"
                                         },
                                         {
                                             "nombre": "Desactivar"
@@ -5274,7 +5484,7 @@
                                     "nombre": "Agendar visita",
                                     "tareas": [
                                         {
-                                            "nombre": "Selección y confirmación de fecha de visita "
+                                            "nombre": "Selección y confirmación de fecha de visita"
                                         }
                                     ]
                                 },
@@ -5290,7 +5500,7 @@
                                     "nombre": "Modificar funcionarios designados",
                                     "tareas": [
                                         {
-                                            "nombre": "Modificación funcionarios designados "
+                                            "nombre": "Modificación funcionarios designados"
                                         }
                                     ]
                                 },
@@ -5298,7 +5508,7 @@
                                     "nombre": "Ejecución de la visita",
                                     "tareas": [
                                         {
-                                            "nombre": "Generar Auto comisorio y firmas "
+                                            "nombre": "Generar Auto comisorio y firmas"
                                         },
                                         {
                                             "nombre": "Visita virtual"
@@ -5315,7 +5525,7 @@
                                             "nombre": "Generar Acta"
                                         },
                                         {
-                                            "nombre": "Firma del acta "
+                                            "nombre": "Firma del acta"
                                         }
                                     ]
                                 },
