@@ -818,7 +818,17 @@
                             ]
                         },
                         {
-                            "nombre": "Frames módulos NSGTA"
+                            "nombre": "Frames módulos NSGTA",
+                            "funcionalidades": [
+                                {
+                                    "nombre": "-",
+                                    "tareas": [
+                                        {
+                                            "nombre": "-"
+                                        }
+                                    ]
+                                }
+                            ]
                         },
                         {
                             "nombre": "Buzón Electrónico",
