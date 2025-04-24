@@ -885,10 +885,10 @@
                             "nombre": "Auditoría",
                             "funcionalidades": [
                                 {
-                                    "nombre": "Auditoría",
+                                    "nombre": "Auditoría2",
                                     "tareas": [
                                         {
-                                            "nombre": "Auditoria"
+                                            "nombre": "Auditoria3"
                                         }
                                     ]
                                 }
