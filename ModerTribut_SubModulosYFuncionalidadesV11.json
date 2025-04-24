@@ -895,10 +895,10 @@
                             "nombre": "Auditoría",
                             "funcionalidades": [
                                 {
-                                    "nombre": "Auditoría2",
+                                    "nombre": "Auditoría",
                                     "tareas": [
                                         {
-                                            "nombre": "Auditoria3"
+                                            "nombre": "Auditoria"
                                         }
                                     ]
                                 }
@@ -1438,7 +1438,7 @@
                                             "nombre": "Diligenciamiento - Inclusion"
                                         },
                                         {
-                                            "nombre": "Diligenciamiento -Sugerida"
+                                            "nombre": "Diligenciamiento - Sugerida"
                                         },
                                         {
                                             "nombre": "Diligenciamiento - Incial"
@@ -3634,7 +3634,17 @@
                             ]
                         },
                         {
-                            "nombre": "Otros conceptos, tasas o contribuciones"
+                            "nombre": "Otros conceptos, tasas o contribuciones",
+                            "funcionalidades": [
+                                {
+                                    "nombre": "-",
+                                    "tareas": [
+                                        {
+                                            "nombre": "-"
+                                        }
+                                    ]
+                                }
+                            ]
                         },
                         {
                             "nombre": "Conciliación contable",
@@ -4290,6 +4300,9 @@
                                 {
                                     "nombre": "-",
                                     "tareas": [
+                                        {
+                                            "nombre": "-"
+                                        }
                                     ]
                                 }
                             ]
@@ -4704,8 +4717,11 @@
                             "nombre": "Conciliaciones",
                             "funcionalidades": [
                                 {
-                                    "nombre": "1",
+                                    "nombre": "-",
                                     "tareas": [
+                                        {
+                                            "nombre": "-"
+                                        }
                                     ]
                                 }
                             ]
@@ -4714,8 +4730,11 @@
                             "nombre": "Procesos Judiciales y Administrativos",
                             "funcionalidades": [
                                 {
-                                    "nombre": "1",
+                                    "nombre": "-",
                                     "tareas": [
+                                        {
+                                            "nombre": "-"
+                                        }
                                     ]
                                 }
                             ]
@@ -4724,8 +4743,11 @@
                             "nombre": "Proceso Penales",
                             "funcionalidades": [
                                 {
-                                    "nombre": "1",
+                                    "nombre": "-",
                                     "tareas": [
+                                        {
+                                            "nombre": "-"
+                                        }
                                     ]
                                 }
                             ]
@@ -4734,8 +4756,11 @@
                             "nombre": "Acciones  Constitucionales ",
                             "funcionalidades": [
                                 {
-                                    "nombre": "1",
+                                    "nombre": "-",
                                     "tareas": [
+                                        {
+                                            "nombre": "-"
+                                        }
                                     ]
                                 }
                             ]
@@ -4744,8 +4769,11 @@
                             "nombre": "Autogestión",
                             "funcionalidades": [
                                 {
-                                    "nombre": "1",
+                                    "nombre": "-",
                                     "tareas": [
+                                        {
+                                            "nombre": "-"
+                                        }
                                     ]
                                 }
                             ]
@@ -4758,7 +4786,22 @@
             "nombre": "M-14 – Gestión y Apoyo Jurídico",
             "modulosPrincipales": [
                 {
-                    "nombre": "Gestión y Apoyo Jurídico"
+                    "nombre": "Gestión y Apoyo Jurídico",
+                    "submodulos": [
+                        {
+                            "nombre": "-",
+                            "funcionalidades": [
+                                {
+                                    "nombre": "-",
+                                    "tareas": [
+                                        {
+                                            "nombre": "-"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
                 }
             ]
         },
@@ -4766,7 +4809,22 @@
             "nombre": "M-15 – Planeación Tributaria",
             "modulosPrincipales": [
                 {
-                    "nombre": "Planeación Tributaria"
+                    "nombre": "Planeación Tributaria",
+                    "submodulos": [
+                        {
+                            "nombre": "-",
+                            "funcionalidades": [
+                                {
+                                    "nombre": "-",
+                                    "tareas": [
+                                        {
+                                            "nombre": "-"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
                 }
             ]
         },
@@ -5335,12 +5393,25 @@
                                 {
                                     "nombre": "Diseño de Estructura de Datos",
                                     "tareas": [
+                                        {
+                                            "nombre": "-"
+                                        }
                                     ]
                                 }
                             ]
                         },
                         {
-                            "nombre": "EC-01-02 Expediente Digital"
+                            "nombre": "EC-01-02 Expediente Digital",
+                            "funcionalidades": [
+                                {
+                                    "nombre": "-",
+                                    "tareas": [
+                                        {
+                                            "nombre": "-"
+                                        }
+                                    ]
+                                }
+                            ]
                         },
                         {
                             "nombre": "EC-01-03 Consumo de información",
@@ -5348,6 +5419,9 @@
                                 {
                                     "nombre": "Reportes",
                                     "tareas": [
+                                        {
+                                            "nombre": "-"
+                                        }
                                     ]
                                 }
                             ]
@@ -5356,6 +5430,12 @@
                             "nombre": "EC-01-03 Trazabilidad",
                             "funcionalidades": [
                                 {
+                                    "nombre": "-",
+                                    "tareas": [
+                                        {
+                                            "nombre": "-"
+                                        }
+                                    ]
                                 }
                             ]
                         }
