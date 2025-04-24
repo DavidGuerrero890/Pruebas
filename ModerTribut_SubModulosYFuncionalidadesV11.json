@@ -818,11 +818,7 @@
                             ]
                         },
                         {
-                            "nombre": "Frames módulos NSGTA",
-                            "funcionalidades": [
-                                {
-                                }
-                            ]
+                            "nombre": "Frames módulos NSGTA"
                         },
                         {
                             "nombre": "Buzón Electrónico",
@@ -3628,11 +3624,7 @@
                             ]
                         },
                         {
-                            "nombre": "Otros conceptos, tasas o contribuciones",
-                            "funcionalidades": [
-                                {
-                                }
-                            ]
+                            "nombre": "Otros conceptos, tasas o contribuciones"
                         },
                         {
                             "nombre": "Conciliación contable",
@@ -5338,11 +5330,7 @@
                             ]
                         },
                         {
-                            "nombre": "EC-01-02 Expediente Digital",
-                            "funcionalidades": [
-                                {
-                                }
-                            ]
+                            "nombre": "EC-01-02 Expediente Digital"
                         },
                         {
                             "nombre": "EC-01-03 Consumo de información",
