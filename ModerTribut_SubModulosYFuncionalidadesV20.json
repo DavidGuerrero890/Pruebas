@@ -5592,6 +5592,135 @@
             ]
         },
         {
+            "nombre": "M-19 – Ecosistema de Facturación Electrónica",
+            "modulosPrincipales": [
+                {
+                    "nombre": "Ecosistema de Facturación Electrónica",
+                    "submodulos": [
+                        {
+                            "nombre": "Ecosistema de Facturación Electrónica - Contribuyente",
+                            "funcionalidades": [
+                                {
+                                    "nombre": "Consulta Facturas Electrónicas Recibidas.",
+                                    "tareas": [
+                                        {
+                                            "nombre": "Generar Informe de facturas recibidas"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "nombre": "Numeración de Facturación.",
+                                    "tareas": [
+                                        {
+                                            "nombre": "Consultar Rangos de Numeración"
+                                        },
+                                        {
+                                            "nombre": "Autorizar Rangos de Numeración"
+                                        },
+                                        {
+                                            "nombre": "Habilitar Rangos de Numeración"
+                                        },
+                                        {
+                                            "nombre": "Inhabilitar Rangos de Numeración"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "nombre": "Ingreso a Ambiente Pruebas y Habilitación.",
+                                    "tareas": [
+                                        {
+                                            "nombre": "Conectar el NSGT con el catálogo de Facturación Electrónica ambiente de Habilitación y que todas sus funcionalidades actuales funcionen al 100%"
+                                        },
+                                        {
+                                            "nombre": "Ingresar al catalogo como OFE, por la sección OFE y que todas sus funcionalidades actuales funcionen al 100%"
+                                        },
+                                        {
+                                            "nombre": "Ingresar al catalogo como NO OFE, por la sección NO OFE y que todas sus funcionalidades actuales funcionen al 100%"
+                                        },
+                                        {
+                                            "nombre": "Poder buscar cualquier documento a traves del CUFE, CUNE, CUDE, etc"
+                                        },
+                                        {
+                                            "nombre": "Al momento de registrarse en Factura Electrónica de Venta, el correo guardarlo en el RUT del contribuyente"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "nombre": "Ingreso a Ambiente Producción.",
+                                    "tareas": [
+                                        {
+                                            "nombre": "Conectar el NSGT con el catálogo de Facturación Electrónica ambiente de Producción y que todas sus funcionalidades actuales funcionen al 100%"
+                                        },
+                                        {
+                                            "nombre": "Ingresar al catalogo como OFE, por la sección OFE y que todas sus funcionalidades actuales funcionen al 100%"
+                                        },
+                                        {
+                                            "nombre": "Ingresar al catalogo como NO OFE, por la sección NO OFE y que todas sus funcionalidades actuales funcionen al 100%"
+                                        },
+                                        {
+                                            "nombre": "Poder buscar cualquier documento a traves del CUFE, CUNE, CUDE, etc"
+                                        },
+                                        {
+                                            "nombre": "Disponer de la información necesaria por los demás Modulos del NSGT en el Registro Central de Operaciones."
+                                        },
+                                        {
+                                            "nombre": "Marcar las Facturas utilizadas para devolución del IVA (Estados en las Facturas)"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "nombre": "Ecosistema de Facturación Electrónica - Funcionario",
+                            "funcionalidades": [
+                                {
+                                    "nombre": "Consulta Facturas Electrónicas Recibidas.",
+                                    "tareas": [
+                                        {
+                                            "nombre": "Generar Informe de facturas recibidas"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "nombre": "Numeración de Facturación.",
+                                    "tareas": [
+                                        {
+                                            "nombre": "Consultar Rangos de Numeración"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "nombre": "Ingreso a Ambiente Pruebas y Habilitación.",
+                                    "tareas": [
+                                        {
+                                            "nombre": "Conectar el NSGT con el catálogo de Facturación Electrónica ambiente de Habilitación y que todas sus funcionalidades actuales funcionen al 100%"
+                                        },
+                                        {
+                                            "nombre": "Ingresar al catalogo como Administrador, por la sección Administrador y que todas sus funcionalidades actuales funcionen al 100%"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "nombre": "Ingreso a Ambiente Producción.",
+                                    "tareas": [
+                                        {
+                                            "nombre": "Conectar el NSGT con el catálogo de Facturación Electrónica ambiente de Producción y que todas sus funcionalidades actuales funcionen al 100%"
+                                        },
+                                        {
+                                            "nombre": "Ingresar al catalogo como Administrador, por la sección Administrador y que todas sus funcionalidades actuales funcionen al 100%"
+                                        },
+                                        {
+                                            "nombre": "Ingresar al catálogo como Administrador, por la sección Administrador y que se pueda consultar todos los Logs o historico de eventos realizados por los Contribuyentes en el ambiente de Habilitación y Producción."
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
             "nombre": "EC-01 – Registro Central de Operaciones",
             "modulosPrincipales": [
                 {
