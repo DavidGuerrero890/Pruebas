@@ -2050,20 +2050,10 @@
                                         },
                                         {
                                             "nombre": "Firma Declaración"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "nombre": "Formulario 150",
-                                    "tareas": [
+                                        },
                                         {
                                             "nombre": "Presentación"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "nombre": "Formulario 2573",
-                                    "tareas": [
+                                        },
                                         {
                                             "nombre": "Documentos Soportes"
                                         }
