@@ -98,7 +98,7 @@
     
     <!-- Titulo de la Pagina Web -->
     <header style="text-align: center; padding: 2px; background: #f4f4f4; position: fixed; top: 0; width: 100%; z-index: 1000;">
-        <h1>Diagrama de Grafos Relacional - Modernización Tributaria - V1.1 - 24/04/2025</h1>
+        <h1>Diagrama de Grafos Relacional - Modernización Tributaria - V2.0 - 24/04/2025</h1>
     </header>
     
     <!-- Estilo del Tooltip -->
@@ -140,7 +140,7 @@
         
         console.log ("Inicializando Script")
 
-        urlModulosLinks = "https://raw.githubusercontent.com/DavidGuerrero890/Pruebas/refs/heads/main/ModerTribut_ModulosYLinksV11.json"
+        urlModulosLinks = "https://raw.githubusercontent.com/DavidGuerrero890/Pruebas/refs/heads/main/ModerTribut_ModulosYLinksV20.json"
         //urlModulosLinks = "ModerTribut_ModulosYLinksV11.json"
 
         d3.json(urlModulosLinks).then(function(data){
@@ -336,7 +336,7 @@
             
             // Actualizar el contenido de la Tabla de Jerarquias
             function mostrarJerarquiaPorModulo(nombreModuloSeleccionado) {
-            d3.json('https://raw.githubusercontent.com/DavidGuerrero890/Pruebas/refs/heads/main/ModerTribut_SubModulosYFuncionalidadesV11.json')
+            d3.json('https://raw.githubusercontent.com/DavidGuerrero890/Pruebas/refs/heads/main/ModerTribut_SubModulosYFuncionalidadesV20.json')
                 .then(function(data) {
                 const tbody = d3.select('#hierarchicalTable tbody');
                 tbody.html('');
@@ -796,7 +796,7 @@
     
     <!-- Script que llena la Tabla de Integrantes en los Modulos -->
     <script>
-        urlModulosIntegrantes = "https://raw.githubusercontent.com/DavidGuerrero890/Pruebas/refs/heads/main/ModerTribut_ModulosYIntegrantesV11.json"
+        urlModulosIntegrantes = "https://raw.githubusercontent.com/DavidGuerrero890/Pruebas/refs/heads/main/ModerTribut_ModulosYIntegrantesV20.json"
 	//urlModulosIntegrantes = "ModerTribut_ModulosYIntegrantesV11.json"
         
         document.getElementById("showTableBtn").addEventListener("click", function () {
