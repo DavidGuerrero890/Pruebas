@@ -301,7 +301,6 @@
 {"source":"M-16 – Pagos", "target": "Ministerio de Hacienda", "value": 1},
 {"source":"M-16 – Pagos", "target": "Pasarela de Pago", "value": 1},
 {"source":"M-18 – Registro", "target": "M-02 – Declaraciones y Retenciones", "value": 1},
-{"source":"M-18 – Registro", "target": "", "value": 1},
 {"source":"M-18 – Registro", "target": "M-04 – Devoluciones y Compensaciones", "value": 1},
 {"source":"M-18 – Registro", "target": "M-05 – Cobranzas", "value": 1},
 {"source":"M-18 – Registro", "target": "M-06 – Cuenta Corriente", "value": 1},
