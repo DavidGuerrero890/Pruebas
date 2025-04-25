@@ -98,7 +98,7 @@
     
     <!-- Titulo de la Pagina Web -->
     <header style="text-align: center; padding: 2px; background: #f4f4f4; position: fixed; top: 0; width: 100%; z-index: 1000;">
-        <h1>Diagrama de Grafos Relacional - Modernización Tributaria - V1.1 - 22/04/2025</h1>
+        <h1>Diagrama de Grafos Relacional - Modernización Tributaria - V1.1 - 24/04/2025</h1>
     </header>
     
     <!-- Estilo del Tooltip -->
@@ -122,7 +122,7 @@
     <div id="module-table-container" 
        style="position: absolute; 
                left: 30px; 
-                top: 130px; 
+                top: 400px; 
                 width: 450px; 
                 background: #f9f9f9; 
                 padding: 10px; 
@@ -177,14 +177,15 @@
             
             // Creamos el LAYOUT general
             let layout = d3.forceSimulation()
-                    .force("link", d3.forceLink().id(d=>d.id).distance(200))
-                    .force("charge", d3.forceManyBody().strength(-600))
-                    .force("center", d3.forceCenter(960,540))
-                    .force("x", d3.forceX(960).strength(0.01)) // Mantiene movimiento horizontal
-                    .force("y", d3.forceY(540).strength(0.01)) // Mantiene movimiento vertical
-                    .velocityDecay(0.4) // Reducir fricción para más movimiento
-                    .alpha(1) // Evitar que la simulación se detenga
-                    .alphaDecay(0.0005); // Mantiene la simulación corriendo
+                .force("link", d3.forceLink().id(d=>d.id).distance(200))
+                .force("charge", d3.forceManyBody().strength(-600))
+                .force("center", d3.forceCenter(960,600))
+                .force("x", d3.forceX(960).strength(0.01)) // Mantiene movimiento horizontal
+                .force("y", d3.forceY(600).strength(0.01)) // Mantiene movimiento vertical
+                .velocityDecay(0.4) // Reducir fricción para más movimiento
+                .alpha(1) // Evitar que la simulación se detenga
+                .alphaMin(1e-4) // No se apaga hasta niveles muy bajos
+                .alphaDecay(0.0005); // Mantiene la simulación corriendo, mientras mas pequeño, se enfria mas lento y dura mas
 
             // Creamos el LAYOUT de los nodos y links
             layout
@@ -199,8 +200,14 @@
             let svg = d3.select("#graph-container")
                 .append("svg")
                 .attr("width", 1920)
-                .attr("height", 1080)
+                .attr("height", 1400)
                 .style("margin-left", "300px"); // Desplazar el grafo a la derecha
+            
+            let nodoSeleccionado = null;
+            let intervaloPalpito = null;
+            let nodosGrupo1 = [];
+            let indexPalpitoGrupo1 = 0;
+            let intervaloPalpitoGrupo1 = null;
 
             // Definir el marcador de flecha
             svg.append("defs").selectAll("marker")
@@ -264,14 +271,15 @@
                     .on("end", (event, d) => dragended (event, d))
                 )
             
-            // Evento de clic en los nodos
-            .on("click", function(event, d){
-                changeNodeAndLinkColors(d)
-                event.stopPropagation()
-                actualizarTabla(d);
-                mostrarJerarquiaPorModulo(d.id);
-                event.stopPropagation();
-            });
+                // Evento de clic en los nodos
+                .on("click", function(event, d){
+                    changeNodeAndLinkColors(d)
+                    event.stopPropagation()
+                    actualizarTabla(d);
+                    mostrarJerarquiaPorModulo(d.id);
+                    event.stopPropagation();
+                    iniciarPalpitoNodo(d);
+                });
             
             // Actualizar el contenido de la Tabla de Relaciones
             function actualizarTabla(nodo) {
@@ -330,83 +338,83 @@
             function mostrarJerarquiaPorModulo(nombreModuloSeleccionado) {
             d3.json('https://raw.githubusercontent.com/DavidGuerrero890/Pruebas/refs/heads/main/ModerTribut_SubModulosYFuncionalidadesV11.json')
                 .then(function(data) {
-                  const tbody = d3.select('#hierarchicalTable tbody');
-                  tbody.html('');
+                const tbody = d3.select('#hierarchicalTable tbody');
+                tbody.html('');
 
-                  const modulo = data.modulos.find(m => m.nombre === nombreModuloSeleccionado);
-                  if (!modulo) return;
+                const modulo = data.modulos.find(m => m.nombre === nombreModuloSeleccionado);
+                if (!modulo) return;
 
-                  modulo.modulosPrincipales.forEach(mp => {
-                    const submodulos = mp.submodulos ?? [];
+                    modulo.modulosPrincipales.forEach(mp => {
+                        const submodulos = mp.submodulos ?? [];
 
-                    // Caso 1: El módulo no tiene submódulos o submódulos vacíos
-                    if (submodulos.length === 0 || submodulos.every(sm => Object.keys(sm).length === 0)) {
-                      const row = tbody.append('tr');
-                      row.append('td').text(mp.nombre);
-                      row.append('td').text('—');
-                      row.append('td').text('—');
-                      row.append('td').text('—');
-                      return;
-                    }
-
-                    // Caso 2: Módulo con submódulos
-                    const tareasModulo = submodulos
-                      .flatMap(sm => sm.funcionalidades ?? [])
-                      .flatMap(f => f.tareas ?? [])
-                      .length;
-
-                    let mpImpreso = false;
-
-                    submodulos.forEach(sm => {
-                      const nombreSubmodulo = sm.nombre ?? '—';
-                      const funcionalidades = sm.funcionalidades ?? [];
-                      const tareasSub = funcionalidades.flatMap(f => f.tareas ?? []).length;
-
-                      // Caso 2.1: submódulo sin funcionalidades
-                      if (funcionalidades.length === 0) {
-                        const row = tbody.append('tr');
-
-                        if (!mpImpreso) {
-                          row.append('td').text(mp.nombre).attr('rowspan', 1);
-                          mpImpreso = true;
+                        // Caso 1: El módulo no tiene submódulos o submódulos vacíos
+                        if (submodulos.length === 0 || submodulos.every(sm => Object.keys(sm).length === 0)) {
+                            const row = tbody.append('tr');
+                            row.append('td').text(mp.nombre);
+                            row.append('td').text('—');
+                            row.append('td').text('—');
+                            row.append('td').text('—');
+                            return;
                         }
 
-                        row.append('td').text(nombreSubmodulo);
-                        row.append('td').text('—');
-                        row.append('td').text('—');
-                        return;
-                      }
+                        // Caso 2: Módulo con submódulos
+                        const tareasModulo = submodulos
+                            .flatMap(sm => sm.funcionalidades ?? [])
+                            .flatMap(f => f.tareas ?? [])
+                            .length;
 
-                      let smImpreso = false;
+                        let mpImpreso = false;
 
-                      funcionalidades.forEach(f => {
-                        const tareas = f.tareas ?? [];
-                        const tareasNombres = tareas.map(t => t.nombre ?? '—');
-                        let fImpreso = false;
+                        submodulos.forEach(sm => {
+                            const nombreSubmodulo = sm.nombre ?? '—';
+                            const funcionalidades = sm.funcionalidades ?? [];
+                            const tareasSub = funcionalidades.flatMap(f => f.tareas ?? []).length;
 
-                        tareasNombres.forEach(tareaNombre => {
-                          const row = tbody.append('tr');
+                            // Caso 2.1: submódulo sin funcionalidades
+                            if (funcionalidades.length === 0) {
+                                const row = tbody.append('tr');
 
-                          if (!mpImpreso) {
-                            row.append('td').text(mp.nombre).attr('rowspan', tareasModulo);
-                            mpImpreso = true;
-                          }
+                                if (!mpImpreso) {
+                                    row.append('td').text(mp.nombre).attr('rowspan', 1);
+                                    mpImpreso = true;
+                                }
 
-                          if (!smImpreso) {
-                            row.append('td').text(nombreSubmodulo).attr('rowspan', tareasSub);
-                            smImpreso = true;
-                          }
+                                row.append('td').text(nombreSubmodulo);
+                                row.append('td').text('—');
+                                row.append('td').text('—');
+                                return;
+                            }
 
-                          if (!fImpreso) {
-                            row.append('td').text(f.nombre).attr('rowspan', tareasNombres.length);
-                            fImpreso = true;
-                          }
+                            let smImpreso = false;
 
-                          row.append('td').text(tareaNombre);
+                            funcionalidades.forEach(f => {
+                                const tareas = f.tareas ?? [];
+                                const tareasNombres = tareas.map(t => t.nombre ?? '—');
+                                let fImpreso = false;
+
+                                tareasNombres.forEach(tareaNombre => {
+                                    const row = tbody.append('tr');
+
+                                    if (!mpImpreso) {
+                                        row.append('td').text(mp.nombre).attr('rowspan', tareasModulo);
+                                        mpImpreso = true;
+                                    }
+
+                                    if (!smImpreso) {
+                                        row.append('td').text(nombreSubmodulo).attr('rowspan', tareasSub);
+                                        smImpreso = true;
+                                    }
+
+                                    if (!fImpreso) {
+                                        row.append('td').text(f.nombre).attr('rowspan', tareasNombres.length);
+                                        fImpreso = true;
+                                    }
+
+                                    row.append('td').text(tareaNombre);
+                                });
+                            });
                         });
-                      });
                     });
-                  });
                 });
             }
             
@@ -436,6 +444,7 @@
             // Indicar Nombres de los Nodos
             let labels = nodes.append("text")
                 .text(function(d) { return d.id; })
+                .attr("id", d => d.id)
                 .attr('x', 6)
                 .attr('y', 3)
                 .attr("fill", "#2c3e50")
@@ -446,7 +455,121 @@
                 originalNodeColors[d.id] = escalaColor(d.group)
                 originalNodeTitles[d.id] = d.id
             })
+            
+            
+            
+            
+            
+            
+            function iniciarPalpitoNodo(d) {
+                detenerPalpitoGrupo1();
+                detenerPalpito();
 
+                nodoSeleccionado = d;
+
+                const circle = circles.filter(n => n.id === d.id);
+                const label = labels.filter(l => l.id === d.id); // Obtener el texto del nodo
+
+                intervaloPalpito = setInterval(() => {
+                    // Palpitación del nodo (círculo)
+                    circle.transition()
+                        .duration(1000)
+                        .attr("r", escalaRadio(nodeDegree[d.id]) * 1.5)
+                        .transition()
+                        .duration(600)
+                        .attr("r", escalaRadio(nodeDegree[d.id]));
+
+                    // Palpitación del texto (label)
+                    label.transition()
+                        .duration(1000)
+                        .style("font-size", "25px")
+                        .transition()
+                        .duration(600)
+                        .style("font-size", "11px")
+                }, 3000);
+            }
+
+            function detenerPalpito() {
+                if (intervaloPalpito) {
+                    clearInterval(intervaloPalpito);
+                    intervaloPalpito = null;
+                }
+                if (nodoSeleccionado) {
+                    circles.filter(n => n.id === nodoSeleccionado.id)
+                        .transition()
+                        .duration(300)
+                        .attr("r", escalaRadio(nodeDegree[nodoSeleccionado.id]));
+                    nodoSeleccionado = null;
+                }
+            }
+            
+            
+            
+            function iniciarPalpitoGrupo1() {
+                nodosGrupo1 = data.nodes.filter(n => n.group === 1);
+                indexPalpitoGrupo1 = 0;
+
+                intervaloPalpitoGrupo1 = setInterval(() => {
+                    if (nodoSeleccionado) return;
+
+                    // Restaurar tamaño, color y texto de todos los nodos del grupo 1
+                    nodosGrupo1.forEach(n => {
+                        circles.filter(c => c.id === n.id)
+                            .transition()
+                            .duration(2000)
+                            .attr("r", escalaRadio(nodeDegree[n.id]))
+                            .attr("fill", escalaColor(n.group));
+
+                        labels.filter(l => l.id === n.id)
+                            .transition()
+                            .duration(600)
+                            .style("font-size", "11px");
+                    });
+
+                    const nodo = nodosGrupo1[indexPalpitoGrupo1];
+                    const circle = circles.filter(n => n.id === nodo.id);
+                    const label = labels.filter(l => l.id === nodo.id);
+
+                    // Efecto de palpitación sincronizada: nodo, color y texto
+                    circle.transition()
+                        .duration(2000)
+                        .attr("r", escalaRadio(nodeDegree[nodo.id]) * 1.5)
+                        .attr("fill", "#2ff1de")
+                        .transition()
+                        .duration(600)
+                        .attr("r", escalaRadio(nodeDegree[nodo.id]))
+                        .attr("fill", escalaColor(nodo.group));
+
+                    label.transition()
+                        .duration(2000)
+                        .style("font-size", "25px")
+                        .transition()
+                        .duration(600)
+                        .style("font-size", "11px");
+                        //.style("font-weight", "normal");
+
+                    indexPalpitoGrupo1 = (indexPalpitoGrupo1 + 1) % nodosGrupo1.length;
+
+                }, 3000);
+            }
+            
+            function detenerPalpitoGrupo1() {
+                clearInterval(intervaloPalpitoGrupo1);
+                intervaloPalpitoGrupo1 = null;
+
+                nodosGrupo1.forEach(n => {
+                    circles.filter(c => c.id === n.id)
+                        .transition()
+                        .duration(200)
+                        .attr("r", escalaRadio(nodeDegree[n.id]));
+                });
+            }
+            
+            
+            
+            
+            
+            
             function changeNodeAndLinkColors(node){
                 circles.attr("fill", function(d){
                     if (d.id === node.id){
@@ -507,6 +630,8 @@
                 // Limpiar la tabla al hacer clic fuera de los nodos
                 d3.select("#nodeTable tbody").html("");
                 d3.select("#hierarchicalTable tbody").html("");
+                detenerPalpito();
+                iniciarPalpitoGrupo1();
             })
             
             // Definimos función onTick
@@ -580,12 +705,15 @@
                             changeNodeAndLinkColors(node); // Resaltar nodos y enlaces
                             actualizarTabla(node); // Actualizar la tabla de relaciones
                             mostrarJerarquiaPorModulo(node.id);
+                            
+                            iniciarPalpitoNodo(node);
                         });
                 });
             }
 
             // Llamar la función después de cargar los nodos
             llenarTablaModulos();
+            iniciarPalpitoGrupo1();
             
             // Quitar selección al hacer clic fuera de la tabla
             d3.select("body").on("click", function() {
@@ -613,11 +741,11 @@
     
     <!-- Tabla Jerárquica de Módulos, Submódulos, Funcionalidades y Tareas -->
     <div id="hierarchy-table-container" style="text-align: center; padding:10px; background:#f4f4f4; bottom: 0; width: 100%;">
-      <h2>Módulos Principales, Submódulos, Funcionalidades y Tareas</h2>
+      <h2>Frentes de Trabajo, Submódulos, Funcionalidades y Tareas</h2>
         <table id="hierarchicalTable" border="1">
           <thead>
             <tr>
-              <th>Módulos Principales</th>
+              <th>Frentes de Trabajo</th>
               <th>Submódulos</th>
               <th>Funcionalidades</th>
               <th>Tareas</th>
