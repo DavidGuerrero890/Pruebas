@@ -98,7 +98,7 @@
     
     <!-- Titulo de la Pagina Web -->
     <header style="text-align: center; padding: 2px; background: #f4f4f4; position: fixed; top: 0; width: 100%; z-index: 1000;">
-        <h1>Diagrama de Grafos Relacional - Modernización Tributaria - V2.0 - 08/05/2025 - 2:52 PM</h1>
+        <h1>Diagrama de Grafos Relacional - Modernización Tributaria - V2.0 - 15/05/2025 - 8:30 PM</h1>
     </header>
     
     <!-- Estilo del Tooltip -->
@@ -179,7 +179,7 @@
             let layout = d3.forceSimulation()
                 .force("link", d3.forceLink().id(d=>d.id).distance(200))
                 .force("charge", d3.forceManyBody().strength(-600))
-                .force("center", d3.forceCenter(960,600))
+                .force("center", d3.forceCenter(960,750))
                 .force("x", d3.forceX(960).strength(0.01)) // Mantiene movimiento horizontal
                 .force("y", d3.forceY(600).strength(0.01)) // Mantiene movimiento vertical
                 .velocityDecay(0.4) // Reducir fricción para más movimiento
