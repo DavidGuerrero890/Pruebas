@@ -573,6 +573,7 @@
 {"source":"Hito 5 - Lograr la facilitación y control del recaudo primario", "target": "M-16 – Pagos", "value": 1},
 {"source":"Hito 5 - Lograr la facilitación y control del recaudo primario", "target": "M-17 – Configuración y Administración", "value": 1},
 {"source":"Hito 5 - Lograr la facilitación y control del recaudo primario", "target": "M-18 – Registro", "value": 1},
+{"source":"Hito 5 - Lograr la facilitación y control del recaudo primario", "target": "EC-01 – Registro Central de Operaciones", "value": 1},
 {"source":"Hito 6 - Lograr la facilitación y control del recaudo secundario", "target": "M-01 – Atención al Cliente", "value": 1},
 {"source":"Hito 6 - Lograr la facilitación y control del recaudo secundario", "target": "M-04 – Devoluciones y Compensaciones", "value": 1},
 {"source":"Hito 6 - Lograr la facilitación y control del recaudo secundario", "target": "M-06 – Cuenta Corriente", "value": 1},
