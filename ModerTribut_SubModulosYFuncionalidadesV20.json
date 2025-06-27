@@ -118,30 +118,48 @@
                                     "nombre": "Agendamiento de cita presencial/virtual",
                                     "tareas": [
                                         {
-                                            "nombre": "Solicitar cita"
+                                            "nombre": "Activar cita"
                                         },
                                         {
-                                            "nombre": "Consultar"
+                                            "nombre": "Conexión a cita de Video atención"
+                                        },
+                                        {
+                                            "nombre": "Consultar cita"
                                         },
                                         {
                                             "nombre": "Modificar/cancelar citas"
                                         },
                                         {
-                                            "nombre": "Notificación citas"
+                                            "nombre": "Nombre de la tarea o actividad"
                                         },
                                         {
-                                            "nombre": "Turno Virtual web"
+                                            "nombre": "Notificaciones automáticas"
                                         },
                                         {
-                                            "nombre": "Video atención programada"
+                                            "nombre": "Seguimiento en tiempo real del Turno"
+                                        },
+                                        {
+                                            "nombre": "Solicitar cita"
+                                        },
+                                        {
+                                            "nombre": "Solicitar cita de Video atención"
+                                        },
+                                        {
+                                            "nombre": "Solicitar turno Virtual web"
                                         }
                                     ]
                                 },
                                 {
-                                    "nombre": "Llamada telefónica",
+                                    "nombre": "llamada en línea en el sitio web",
                                     "tareas": [
                                         {
-                                            "nombre": "Botón de acceso a llamada en línea"
+                                            "nombre": "Acceso de llamada en línea en el sitio web"
+                                        },
+                                        {
+                                            "nombre": "Seleccionar AudioTexto en el IVR"
+                                        },
+                                        {
+                                            "nombre": "Encuesta de satisfaccion llamada en Línea"
                                         }
                                     ]
                                 },
@@ -149,15 +167,15 @@
                                     "nombre": "Devolución de llamada",
                                     "tareas": [
                                         {
-                                            "nombre": "Formulario de solicitud de devolución de llamada"
+                                            "nombre": "Acceder a Formulario de solicitud de devolución de llamada"
                                         }
                                     ]
                                 },
                                 {
-                                    "nombre": "Video atención",
+                                    "nombre": "Video atención inmediata",
                                     "tareas": [
                                         {
-                                            "nombre": "Botón de acceso a video atención inmediata"
+                                            "nombre": "Acceder a video atención inmediata"
                                         }
                                     ]
                                 },
@@ -165,7 +183,7 @@
                                     "nombre": "Chat de asistencia IA",
                                     "tareas": [
                                         {
-                                            "nombre": "Atención en lenguaje natural"
+                                            "nombre": "Acceder al Chat de asistencia IA en lenguaje natural"
                                         }
                                     ]
                                 },
@@ -173,23 +191,31 @@
                                     "nombre": "Chat-web con funcionario",
                                     "tareas": [
                                         {
-                                            "nombre": "Boton de chatweb o whatsapp"
+                                            "nombre": "Acceder al  chatweb o whatsapp"
                                         }
                                     ]
                                 },
                                 {
-                                    "nombre": "Redes sociales",
+                                    "nombre": "Atención ciudadana a través de redes sociales",
                                     "tareas": [
                                         {
-                                            "nombre": "Botones de acceso"
+                                            "nombre": "Acceder a redes sociales de la Entidad"
                                         }
                                     ]
                                 },
                                 {
-                                    "nombre": "Medición de la satisfacción del ciudadano",
+                                    "nombre": "Visualización integrada de canales de atención",
                                     "tareas": [
                                         {
-                                            "nombre": "Calificación del servicio"
+                                            "nombre": "visualizar y acceder de forma centralizada a todos los canales de atención disponibles"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "nombre": "Protección de Datos Personales en Canales de Atención",
+                                    "tareas": [
+                                        {
+                                            "nombre": "Gestionar la Protección de Datos Personales en los Canales de Atención"
                                         }
                                     ]
                                 }
@@ -223,7 +249,7 @@
                                     ]
                                 },
                                 {
-                                    "nombre": "Desistimiento expreso",
+                                    "nombre": "Desistimiento",
                                     "tareas": [
                                         {
                                             "nombre": "Desistimiento expreso"
@@ -231,10 +257,10 @@
                                     ]
                                 },
                                 {
-                                    "nombre": "Notificación y/o alertas",
+                                    "nombre": "Notificación y/o alertas e historial",
                                     "tareas": [
                                         {
-                                            "nombre": "Panel notificación de comunicaciones y formatos emitidos por el sistema de PQSRD"
+                                            "nombre": "Notificación de comunicaciones,  formatos emitidos y panel de historial de solicitudes."
                                         }
                                     ]
                                 }
@@ -276,15 +302,84 @@
                                     "nombre": "Bandeja de Entrada",
                                     "tareas": [
                                         {
-                                            "nombre": "Bandeja de Entrada"
+                                            "nombre": "Presentación Bandeja de Entrada"
+                                        },
+                                        {
+                                            "nombre": "Consulta de comunicaciones"
+                                        },
+                                        {
+                                            "nombre": "Buscar comunicaciones"
+                                        },
+                                        {
+                                            "nombre": "Marcar comunicaciones"
+                                        },
+                                        {
+                                            "nombre": "Filtrar Comunicaciones"
+                                        },
+                                        {
+                                            "nombre": "Eliminar Comunicaciones"
+                                        },
+                                        {
+                                            "nombre": "Ordenar Comunicaciones"
+                                        },
+                                        {
+                                            "nombre": "Abrir Comunicaciones"
+                                        },
+                                        {
+                                            "nombre": "Clasificar Comunicaciones"
+                                        },
+                                        {
+                                            "nombre": "Escuchar Comunicaciones"
+                                        },
+                                        {
+                                            "nombre": "Descargas Comunicaciones"
+                                        },
+                                        {
+                                            "nombre": "Ver comunicaciones en formato para computadores, tabletas y móviles"
                                         }
                                     ]
                                 },
                                 {
-                                    "nombre": "Bandeja de Salida",
+                                    "nombre": "Comunicaciones Eliminadas",
                                     "tareas": [
                                         {
-                                            "nombre": "Bandeha de salida"
+                                            "nombre": "Eliminados"
+                                        },
+                                        {
+                                            "nombre": "Ver eliminados"
+                                        },
+                                        {
+                                            "nombre": "Restaurar mensajes"
+                                        },
+                                        {
+                                            "nombre": "Eliminar permanentemente mensaje"
+                                        },
+                                        {
+                                            "nombre": "Ver detalles de mensaje eliminado"
+                                        },
+                                        {
+                                            "nombre": "Filtrar mensajes"
+                                        },
+                                        {
+                                            "nombre": "Buscar"
+                                        },
+                                        {
+                                            "nombre": "Restaurar múltiples mensajes"
+                                        },
+                                        {
+                                            "nombre": "Confirmar eliminación definitiva"
+                                        },
+                                        {
+                                            "nombre": "Descargar adjuntos de mensajes eliminados"
+                                        },
+                                        {
+                                            "nombre": "Notificar antes de eliminación automática"
+                                        },
+                                        {
+                                            "nombre": "Acceder desde dispositivos móviles"
+                                        },
+                                        {
+                                            "nombre": "Registrar auditoría de eliminación"
                                         }
                                     ]
                                 },
@@ -293,6 +388,24 @@
                                     "tareas": [
                                         {
                                             "nombre": "Notificaciones"
+                                        },
+                                        {
+                                            "nombre": "Visualizar Actos Administtrativos"
+                                        },
+                                        {
+                                            "nombre": "Recibir notificación por mensaje"
+                                        },
+                                        {
+                                            "nombre": "Consultar notificaciones recibidas"
+                                        },
+                                        {
+                                            "nombre": "Recibir alertas por nuevas notificaciones"
+                                        },
+                                        {
+                                            "nombre": "Filtrar notificaciones"
+                                        },
+                                        {
+                                            "nombre": "Confirmar lectura de notificación"
                                         }
                                     ]
                                 }
@@ -358,7 +471,28 @@
                                     "nombre": "Mis Facturas Electrónicas",
                                     "tareas": [
                                         {
-                                            "nombre": "Mis Facturas Electrónicas"
+                                            "nombre": "Consultas de interes"
+                                        },
+                                        {
+                                            "nombre": "Consultar facturas electrónicas"
+                                        },
+                                        {
+                                            "nombre": "Filtrar consulta"
+                                        },
+                                        {
+                                            "nombre": "Visualizar listado"
+                                        },
+                                        {
+                                            "nombre": "Ver resumen"
+                                        },
+                                        {
+                                            "nombre": "Buscar factura específica"
+                                        },
+                                        {
+                                            "nombre": "Descargar"
+                                        },
+                                        {
+                                            "nombre": "Acceder"
                                         }
                                     ]
                                 },
@@ -367,6 +501,12 @@
                                     "tareas": [
                                         {
                                             "nombre": "Confirmación correo DIAN"
+                                        },
+                                        {
+                                            "nombre": "Confirmar autenticidad"
+                                        },
+                                        {
+                                            "nombre": "Consultar historial correos oficiales"
                                         }
                                     ]
                                 },
@@ -374,7 +514,22 @@
                                     "nombre": "Información Exogena",
                                     "tareas": [
                                         {
-                                            "nombre": "Información Exogena"
+                                            "nombre": "Presentar Información Exógena"
+                                        },
+                                        {
+                                            "nombre": "Consultar información"
+                                        },
+                                        {
+                                            "nombre": "Descargar reporte"
+                                        },
+                                        {
+                                            "nombre": "Filtrar información"
+                                        },
+                                        {
+                                            "nombre": "Notificación"
+                                        },
+                                        {
+                                            "nombre": "Reportar inconsistencias"
                                         }
                                     ]
                                 }
@@ -605,7 +760,7 @@
                             ]
                         },
                         {
-                            "nombre": "PQSRDD",
+                            "nombre": "PQSR",
                             "funcionalidades": [
                                 {
                                     "nombre": "Radicar PQSRD",
@@ -632,7 +787,7 @@
                                     ]
                                 },
                                 {
-                                    "nombre": "Desistimiento expreso PQSRD",
+                                    "nombre": "Desistimiento PQSRD",
                                     "tareas": [
                                         {
                                             "nombre": "Solicitud de desistimiento expreso"
@@ -656,7 +811,7 @@
                                     ]
                                 },
                                 {
-                                    "nombre": "Asignación multiple",
+                                    "nombre": "Asignación multiple de las PQSRD",
                                     "tareas": [
                                         {
                                             "nombre": "Creación de casos segundarios"
@@ -664,18 +819,18 @@
                                     ]
                                 },
                                 {
-                                    "nombre": "Visualización en el frontal de la vista 360",
+                                    "nombre": "Visualización en el frontal de la vista 360-PQSR",
                                     "tareas": [
                                         {
-                                            "nombre": "Frontal vista 360"
+                                            "nombre": "Visualización de PQSRD en el frontal de la vista 360"
                                         }
                                     ]
                                 },
                                 {
-                                    "nombre": "Paneles y estados",
+                                    "nombre": "Paneles, formatos y estados",
                                     "tareas": [
                                         {
-                                            "nombre": "Visualización de casos de PQSRDD"
+                                            "nombre": "Visualización en paneles, formularios y estados de las solicitudes de PQSRD"
                                         }
                                     ]
                                 },
@@ -699,12 +854,12 @@
                                     "nombre": "Alertas",
                                     "tareas": [
                                         {
-                                            "nombre": "Alertas"
+                                            "nombre": "Alertas del sistema"
                                         }
                                     ]
                                 },
                                 {
-                                    "nombre": "Menu de administrador",
+                                    "nombre": "Administración del sistema",
                                     "tareas": [
                                         {
                                             "nombre": "Menu de administrador"
@@ -712,10 +867,10 @@
                                     ]
                                 },
                                 {
-                                    "nombre": "Roles del sistema",
+                                    "nombre": "Roles del sistema y Unidades de negocio.",
                                     "tareas": [
                                         {
-                                            "nombre": "Roles del sistema"
+                                            "nombre": "Roles y unidades de negocio del sistema"
                                         }
                                     ]
                                 },
@@ -741,7 +896,7 @@
                                     ]
                                 },
                                 {
-                                    "nombre": "Consulta de PQSRDD asignadas",
+                                    "nombre": "Consulta de PQSRD asignadas",
                                     "tareas": [
                                         {
                                             "nombre": "Consulta PQRSD asignadas"
@@ -803,7 +958,13 @@
                                     "nombre": "Consultar",
                                     "tareas": [
                                         {
-                                            "nombre": "Consultar"
+                                            "nombre": "Conocer información TACI del contribuyente"
+                                        },
+                                        {
+                                            "nombre": "Consultas"
+                                        },
+                                        {
+                                            "nombre": "Notificaciones"
                                         }
                                     ]
                                 },
@@ -943,7 +1104,37 @@
                                     "nombre": "Auditoría",
                                     "tareas": [
                                         {
-                                            "nombre": "Auditoria"
+                                            "nombre": "Presentar Auditoría de Auditoria"
+                                        },
+                                        {
+                                            "nombre": "Registrar actividades del usuario"
+                                        },
+                                        {
+                                            "nombre": "Visualizar logs de auditoría"
+                                        },
+                                        {
+                                            "nombre": "Filtrar logs de auditoría"
+                                        },
+                                        {
+                                            "nombre": "Generar informe de logs de auditoría"
+                                        },
+                                        {
+                                            "nombre": "Notificar sobre eventos críticos en logs de auditoría"
+                                        },
+                                        {
+                                            "nombre": "Configurar la retención de logs de auditoría"
+                                        },
+                                        {
+                                            "nombre": "Consultar logs por fecha y usuario"
+                                        },
+                                        {
+                                            "nombre": "Visualizar detalle de un evento de auditoría"
+                                        },
+                                        {
+                                            "nombre": "Restringir acceso a los logs de auditoría"
+                                        },
+                                        {
+                                            "nombre": "Configurar eventos a auditar"
                                         }
                                     ]
                                 }
@@ -2231,42 +2422,10 @@
                             "nombre": "CAMBIARIO",
                             "funcionalidades": [
                                 {
-                                    "nombre": "Clasificación",
+                                    "nombre": "Formulario 532",
                                     "tareas": [
                                         {
-                                            "nombre": "Activación de submódulos"
-                                        },
-                                        {
-                                            "nombre": "Reflejar formulario correspondiente con la información del dato maestro de Registro."
-                                        }
-                                    ]
-                                },
-                                {
-                                    "nombre": "Formulario 530",
-                                    "tareas": [
-                                        {
-                                            "nombre": "Diligenciamiento"
-                                        },
-                                        {
-                                            "nombre": "Numeración y aceptación de la declaración"
-                                        },
-                                        {
-                                            "nombre": "Firma Declaración"
-                                        },
-                                        {
-                                            "nombre": "Presentación"
-                                        },
-                                        {
-                                            "nombre": "Prueba de presentación"
-                                        },
-                                        {
-                                            "nombre": "Control Declaración NSGA (Viajeros)"
-                                        },
-                                        {
-                                            "nombre": "Alerta Fiscalización"
-                                        },
-                                        {
-                                            "nombre": "Liquidación"
+                                            "nombre": "Verificar si el usuario se encuentra inscrito en el módulo de registro"
                                         }
                                     ]
                                 },
@@ -2274,40 +2433,39 @@
                                     "nombre": "Formulario 532",
                                     "tareas": [
                                         {
-                                            "nombre": "Diligenciamiento"
+                                            "nombre": "Disponer y permitir la selección del Formulario DIAN 532"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "nombre": "Formulario 532",
+                                    "tareas": [
+                                        {
+                                            "nombre": "Seleccionar el tipo de operación a declarar y calidad en la que se presenta la declaración"
                                         },
                                         {
-                                            "nombre": "Cargar documentos soporte"
+                                            "nombre": "Habilitar el diligenciamiento del Formulario DIAN 532"
                                         },
                                         {
-                                            "nombre": "Numeración y aceptación de la declaración (Borrador)"
+                                            "nombre": "Cargar documentos soporte Formulario DIAN 532"
                                         },
                                         {
-                                            "nombre": "Validación de términos"
+                                            "nombre": "Aceptar y numerar el borrador del Formulario DIAN 532"
                                         },
                                         {
-                                            "nombre": "Liquidación"
+                                            "nombre": "Validar que la numeración y aceptación del Formulario DIAN 532 se efectúe en término y generar alertas tempranas si hay lugar a ello"
                                         },
                                         {
-                                            "nombre": "Actualización declaración numerada y aceptada"
+                                            "nombre": "Habilitar liquidación de infracción con pago reducido y vincular con el módulo M-16"
                                         },
                                         {
-                                            "nombre": "Firma Declaración"
+                                            "nombre": "Habilitar y validar firma del Formulario DIAN 532"
                                         },
                                         {
-                                            "nombre": "Presentación declaración"
+                                            "nombre": "Presentar el Formulario DIAN 532 y enviar prueba de presentación al correo informado por el declarante"
                                         },
                                         {
-                                            "nombre": "Prueba de presentación"
-                                        },
-                                        {
-                                            "nombre": "Inspección NSGA - Viajeros"
-                                        },
-                                        {
-                                            "nombre": "Alerta Fiscalización"
-                                        },
-                                        {
-                                            "nombre": "Liquidación"
+                                            "nombre": "Reportes Declaración 532"
                                         }
                                     ]
                                 },
@@ -2315,45 +2473,46 @@
                                     "nombre": "Formulario 534",
                                     "tareas": [
                                         {
-                                            "nombre": "Diligenciamiento"
+                                            "nombre": "Verificar si el usuario se encuentra inscrito en el módulo de registro"
                                         },
                                         {
-                                            "nombre": "Cargar documentos soporte"
+                                            "nombre": "Disponer y permitir la selección del Formulario DIAN 534"
                                         },
                                         {
-                                            "nombre": "Numeración y aceptación de la declaración (Borrador)"
+                                            "nombre": "Seleccionar el tipo de operación a declarar y calidad en la que se presenta la declaración"
                                         },
                                         {
-                                            "nombre": "Validación de términos"
+                                            "nombre": "Habilitar el diligenciamiento del Formulario DIAN 534"
                                         },
                                         {
-                                            "nombre": "Liquidación"
+                                            "nombre": "Cargar documentos soporte Formulario DIAN 534"
                                         },
                                         {
-                                            "nombre": "Actualización declaración numerada y aceptada"
+                                            "nombre": "Aceptar y numerar el borrador del Formulario DIAN 534"
                                         },
                                         {
-                                            "nombre": "Firma Declaración"
+                                            "nombre": "Validar que la numeración y aceptación del Formulario DIAN 534 se efectúe en término y generar alertas tempranas si hay lugar a ello"
                                         },
                                         {
-                                            "nombre": "Presentación declaración"
+                                            "nombre": "Habilitar liquidación de infracción con pago reducido"
                                         },
                                         {
-                                            "nombre": "Prueba de presentación"
+                                            "nombre": "Vincular con el módulo M-16"
                                         },
                                         {
-                                            "nombre": "Validación de términos"
+                                            "nombre": "Habilitar la edición de campos del borrador Formulario DIAN 534"
                                         },
                                         {
-                                            "nombre": "Liquidación"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "nombre": "Reportes",
-                                    "tareas": [
+                                            "nombre": "Numerar y aceptar borrador final del Formulario DIAN 534"
+                                        },
                                         {
-                                            "nombre": "Reportes Declaraciones"
+                                            "nombre": "Habilitar y validar firma del Formulario DIAN 532"
+                                        },
+                                        {
+                                            "nombre": "Presentar el Formulario DIAN 534 y enviar prueba de presentación al correo informado por el declarante"
+                                        },
+                                        {
+                                            "nombre": "Reportes Declaración 534"
                                         }
                                     ]
                                 }
@@ -2376,9 +2535,6 @@
                                     "nombre": "Solicitud por concepto de Saldos a Favor en Declaraciones",
                                     "tareas": [
                                         {
-                                            "nombre": "Registrar solicitud"
-                                        },
-                                        {
                                             "nombre": "Radicación"
                                         },
                                         {
@@ -2391,13 +2547,7 @@
                                             "nombre": "Notificación"
                                         },
                                         {
-                                            "nombre": "Pago Giro a Cuenta"
-                                        },
-                                        {
-                                            "nombre": "Pago TIDIS"
-                                        },
-                                        {
-                                            "nombre": "Estado pago"
+                                            "nombre": "Pago"
                                         },
                                         {
                                             "nombre": "Recurso"
@@ -2414,9 +2564,6 @@
                                     "nombre": "Solicitud por concepto de IVA Pagado",
                                     "tareas": [
                                         {
-                                            "nombre": "Registrar solicitud"
-                                        },
-                                        {
                                             "nombre": "Radicación"
                                         },
                                         {
@@ -2429,13 +2576,7 @@
                                             "nombre": "Notificación"
                                         },
                                         {
-                                            "nombre": "Pago Giro a Cuenta"
-                                        },
-                                        {
-                                            "nombre": "Pago TIDIS"
-                                        },
-                                        {
-                                            "nombre": "Estado pago"
+                                            "nombre": "Pago"
                                         },
                                         {
                                             "nombre": "Recurso"
@@ -2452,9 +2593,6 @@
                                     "nombre": "Solicitud por concepto de la Retención en la Fuente a título del Impuesto sobre la renta y complementarios",
                                     "tareas": [
                                         {
-                                            "nombre": "Registrar solicitud"
-                                        },
-                                        {
                                             "nombre": "Radicación"
                                         },
                                         {
@@ -2467,13 +2605,7 @@
                                             "nombre": "Notificación"
                                         },
                                         {
-                                            "nombre": "Pago Giro a Cuenta"
-                                        },
-                                        {
-                                            "nombre": "Pago TIDIS"
-                                        },
-                                        {
-                                            "nombre": "Estado pago"
+                                            "nombre": "Pago"
                                         },
                                         {
                                             "nombre": "Recurso"
@@ -2490,9 +2622,6 @@
                                     "nombre": "Solicitud por concepto de Pagos en exceso o de lo no debido",
                                     "tareas": [
                                         {
-                                            "nombre": "Registrar solicitud"
-                                        },
-                                        {
                                             "nombre": "Radicación"
                                         },
                                         {
@@ -2505,13 +2634,7 @@
                                             "nombre": "Notificación"
                                         },
                                         {
-                                            "nombre": "Pago Giro a Cuenta"
-                                        },
-                                        {
-                                            "nombre": "Pago TIDIS"
-                                        },
-                                        {
-                                            "nombre": "Estado pago"
+                                            "nombre": "Pago"
                                         },
                                         {
                                             "nombre": "Recurso"
@@ -2525,11 +2648,8 @@
                                     ]
                                 },
                                 {
-                                    "nombre": "Solicitud por concepto de Cruce de Cuentas",
+                                    "nombre": "Solicitud por concepto de Cruce de Cuentas Vinculados Cobranzas",
                                     "tareas": [
-                                        {
-                                            "nombre": "Registrar solicitud"
-                                        },
                                         {
                                             "nombre": "Radicación"
                                         },
@@ -2541,6 +2661,9 @@
                                         },
                                         {
                                             "nombre": "Notificación"
+                                        },
+                                        {
+                                            "nombre": "Pago"
                                         },
                                         {
                                             "nombre": "Recurso"
@@ -2557,9 +2680,6 @@
                                     "nombre": "Solicitud por concepto de Saldos a favor adjudicados",
                                     "tareas": [
                                         {
-                                            "nombre": "Registrar solicitud"
-                                        },
-                                        {
                                             "nombre": "Radicación"
                                         },
                                         {
@@ -2572,13 +2692,7 @@
                                             "nombre": "Notificación"
                                         },
                                         {
-                                            "nombre": "Pago Giro a Cuenta"
-                                        },
-                                        {
-                                            "nombre": "Pago TIDIS"
-                                        },
-                                        {
-                                            "nombre": "Estado pago"
+                                            "nombre": "Pago"
                                         },
                                         {
                                             "nombre": "Recurso"
@@ -2595,9 +2709,6 @@
                                     "nombre": "Solicitud por concepto de Saldos a favor por Absorciones o Fusiones.",
                                     "tareas": [
                                         {
-                                            "nombre": "Registrar solicitud"
-                                        },
-                                        {
                                             "nombre": "Radicación"
                                         },
                                         {
@@ -2610,13 +2721,7 @@
                                             "nombre": "Notificación"
                                         },
                                         {
-                                            "nombre": "Pago Giro a Cuenta"
-                                        },
-                                        {
-                                            "nombre": "Pago TIDIS"
-                                        },
-                                        {
-                                            "nombre": "Estado pago"
+                                            "nombre": "Pago"
                                         },
                                         {
                                             "nombre": "Recurso"
@@ -2633,9 +2738,6 @@
                                     "nombre": "Solicitud por concepto de Sentencias y Conciliaciones judiciales",
                                     "tareas": [
                                         {
-                                            "nombre": "Registrar solicitud"
-                                        },
-                                        {
                                             "nombre": "Radicación"
                                         },
                                         {
@@ -2646,9 +2748,6 @@
                                         },
                                         {
                                             "nombre": "Notificación"
-                                        },
-                                        {
-                                            "nombre": "Información Entidad Condenada"
                                         },
                                         {
                                             "nombre": "Recurso"
@@ -2665,25 +2764,16 @@
                                     "nombre": "Solicitud por concepto de Devolución de sumas de dinero pagadas que no corresponden al Tesoro Nacional - VIABILIDAD",
                                     "tareas": [
                                         {
-                                            "nombre": "Registrar solicitud"
-                                        },
-                                        {
                                             "nombre": "Radicación"
                                         },
                                         {
                                             "nombre": "Sustanciación"
                                         },
                                         {
-                                            "nombre": "Acto Administrativo"
+                                            "nombre": "Informe"
                                         },
                                         {
-                                            "nombre": "Notificación"
-                                        },
-                                        {
-                                            "nombre": "Pago SIIF Nación"
-                                        },
-                                        {
-                                            "nombre": "Pago Ministerio de Hacienda"
+                                            "nombre": "Pago"
                                         },
                                         {
                                             "nombre": "Cierre"
@@ -2702,19 +2792,7 @@
                                     "nombre": "Radicación solicitud a turista extranjero  mediante Empresa Operadora?",
                                     "tareas": [
                                         {
-                                            "nombre": "Envío información solicitud"
-                                        },
-                                        {
-                                            "nombre": "Recibido"
-                                        },
-                                        {
-                                            "nombre": "Envío información corregida"
-                                        },
-                                        {
-                                            "nombre": "Registro RUT no obligados"
-                                        },
-                                        {
-                                            "nombre": "Consolidación información"
+                                            "nombre": "Radicación"
                                         },
                                         {
                                             "nombre": "Sustanciación"
@@ -2727,9 +2805,6 @@
                                         },
                                         {
                                             "nombre": "Pago"
-                                        },
-                                        {
-                                            "nombre": "Estado pago"
                                         },
                                         {
                                             "nombre": "Recurso"
@@ -2746,10 +2821,7 @@
                                     "nombre": "Radicación solicitud a turista extranjero - GIT Viajeros o quien haga sus veces en aeropuertos, puertos o pasos de frontera catalogados como internacionales?",
                                     "tareas": [
                                         {
-                                            "nombre": "Información turista"
-                                        },
-                                        {
-                                            "nombre": "Radicación solicitud"
+                                            "nombre": "Radicación"
                                         },
                                         {
                                             "nombre": "Sustanciación"
@@ -2762,9 +2834,6 @@
                                         },
                                         {
                                             "nombre": "Pago"
-                                        },
-                                        {
-                                            "nombre": "Estado pago"
                                         },
                                         {
                                             "nombre": "Recurso"
@@ -2786,19 +2855,10 @@
                                     "nombre": "Gestión Devolución de oficio",
                                     "tareas": [
                                         {
-                                            "nombre": "Validaciones Contribuyente"
+                                            "nombre": "Sustanciación"
                                         },
                                         {
-                                            "nombre": "Validaciones de Consistencia"
-                                        },
-                                        {
-                                            "nombre": "Aceptación Candidatura"
-                                        },
-                                        {
-                                            "nombre": "Validación Cuenta Bancaria"
-                                        },
-                                        {
-                                            "nombre": "Registro de la Solicitud"
+                                            "nombre": "Radicación"
                                         },
                                         {
                                             "nombre": "Acto Administrativo"
@@ -2812,10 +2872,7 @@
                                     "nombre": "Pago SIIF Nación",
                                     "tareas": [
                                         {
-                                            "nombre": "Información para pago"
-                                        },
-                                        {
-                                            "nombre": "Estado pago"
+                                            "nombre": "Pago"
                                         },
                                         {
                                             "nombre": "Recurso"
@@ -5052,7 +5109,7 @@
                                     ]
                                 },
                                 {
-                                    "nombre": "Gestión de pagos no asociados a una obligación",
+                                    "nombre": "Gestión de pagos voluntarios, anticipos o no asociados a una obligación preexistente",
                                     "tareas": [
                                         {
                                             "nombre": "Generación de Referencia Temporal de pago"
@@ -5626,7 +5683,27 @@
                                         },
                                         {
                                             "nombre": "Ingresar al catalogo como NO OFE, por la sección NO OFE y que todas sus funcionalidades actuales funcionen al 100%"
-                                        },
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "nombre": "M-19 – Ecosistema de Facturación Electrónica",
+            "modulosPrincipales": [
+                {
+                    "nombre": "Ecosistema de Facturación Electrónica",
+                    "submodulos": [
+                        {
+                            "nombre": "Ecosistema de Facturación Electrónica - Contribuyente",
+                            "funcionalidades": [
+                                {
+                                    "nombre": "Ingreso a Ambiente Pruebas y Habilitación.",
+                                    "tareas": [
                                         {
                                             "nombre": "Poder buscar cualquier documento a traves del CUFE, CUNE, CUDE, etc"
                                         },
