@@ -2430,7 +2430,7 @@
                                     ]
                                 },
                                 {
-                                    "nombre": "Formulario 532",
+                                    "nombre": "Formulario 532 ",
                                     "tareas": [
                                         {
                                             "nombre": "Disponer y permitir la selección del Formulario DIAN 532"
@@ -5683,27 +5683,7 @@
                                         },
                                         {
                                             "nombre": "Ingresar al catalogo como NO OFE, por la sección NO OFE y que todas sus funcionalidades actuales funcionen al 100%"
-                                        }
-                                    ]
-                                }
-                            ]
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "nombre": "M-19 – Ecosistema de Facturación Electrónica",
-            "modulosPrincipales": [
-                {
-                    "nombre": "Ecosistema de Facturación Electrónica",
-                    "submodulos": [
-                        {
-                            "nombre": "Ecosistema de Facturación Electrónica - Contribuyente",
-                            "funcionalidades": [
-                                {
-                                    "nombre": "Ingreso a Ambiente Pruebas y Habilitación.",
-                                    "tareas": [
+                                        },
                                         {
                                             "nombre": "Poder buscar cualquier documento a traves del CUFE, CUNE, CUDE, etc"
                                         },
