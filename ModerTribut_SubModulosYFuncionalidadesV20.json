@@ -373,9 +373,6 @@
                                             "nombre": "Descargar adjuntos de mensajes eliminados"
                                         },
                                         {
-                                            "nombre": "Notificar antes de eliminación automática"
-                                        },
-                                        {
                                             "nombre": "Acceder desde dispositivos móviles"
                                         },
                                         {
@@ -393,19 +390,49 @@
                                             "nombre": "Visualizar Actos Administtrativos"
                                         },
                                         {
-                                            "nombre": "Recibir notificación por mensaje"
+                                            "nombre": "Ver detalles de Actos Administrativos"
+                                        },
+                                        {
+                                            "nombre": "Clasificar Actos Administrativos"
+                                        },
+                                        {
+                                            "nombre": "Escuchar Actos Administrativos"
+                                        },
+                                        {
+                                            "nombre": "Recibir notificación por Actos Administrativos"
+                                        },
+                                        {
+                                            "nombre": "Buscar Actos Administrativos"
                                         },
                                         {
                                             "nombre": "Consultar notificaciones recibidas"
                                         },
                                         {
+                                            "nombre": "Confirmación recepción de notificación"
+                                        },
+                                        {
                                             "nombre": "Recibir alertas por nuevas notificaciones"
                                         },
                                         {
-                                            "nombre": "Filtrar notificaciones"
+                                            "nombre": "Filtrar Actos Administrativos"
+                                        },
+                                        {
+                                            "nombre": "Ordenar Actos Administrativos"
+                                        },
+                                        {
+                                            "nombre": "Marcar Actos Administrativos"
                                         },
                                         {
                                             "nombre": "Confirmar lectura de notificación"
+                                        },
+                                        {
+                                            "nombre": "Descargar Actos Administrativos"
+                                        },
+                                        {
+                                            "nombre": "Auditoria de notificaciones"
+                                        },
+                                        {
+                                            "nombre": "Ver Actos Administrativos en formato para computadores, tabletas y móviles"
                                         }
                                     ]
                                 }
@@ -2425,7 +2452,7 @@
                                     "nombre": "Formulario 532",
                                     "tareas": [
                                         {
-                                            "nombre": "Verificar si el usuario se encuentra inscrito en el módulo de registro"
+                                            "nombre": "Activación de submodulos"
                                         }
                                     ]
                                 },
@@ -2433,7 +2460,7 @@
                                     "nombre": "Formulario 532 ",
                                     "tareas": [
                                         {
-                                            "nombre": "Disponer y permitir la selección del Formulario DIAN 532"
+                                            "nombre": "Reflejar formulario 532 con la información del dato maestro de Registro"
                                         }
                                     ]
                                 },
@@ -2441,31 +2468,34 @@
                                     "nombre": "Formulario 532",
                                     "tareas": [
                                         {
-                                            "nombre": "Seleccionar el tipo de operación a declarar y calidad en la que se presenta la declaración"
+                                            "nombre": "Seleccionar tipo de operación y calidad del declarante"
                                         },
                                         {
-                                            "nombre": "Habilitar el diligenciamiento del Formulario DIAN 532"
+                                            "nombre": "Diligenciamiento"
                                         },
                                         {
                                             "nombre": "Cargar documentos soporte Formulario DIAN 532"
                                         },
                                         {
-                                            "nombre": "Aceptar y numerar el borrador del Formulario DIAN 532"
+                                            "nombre": "Aceptación y numeración de la declaración (Borrador)"
                                         },
                                         {
-                                            "nombre": "Validar que la numeración y aceptación del Formulario DIAN 532 se efectúe en término y generar alertas tempranas si hay lugar a ello"
+                                            "nombre": "Validación de términos y generación de alertas tempranas"
                                         },
                                         {
-                                            "nombre": "Habilitar liquidación de infracción con pago reducido y vincular con el módulo M-16"
+                                            "nombre": "Liquidación"
                                         },
                                         {
-                                            "nombre": "Habilitar y validar firma del Formulario DIAN 532"
+                                            "nombre": "Firma Formulario 532"
                                         },
                                         {
-                                            "nombre": "Presentar el Formulario DIAN 532 y enviar prueba de presentación al correo informado por el declarante"
+                                            "nombre": "Presentación Formulario 532"
                                         },
                                         {
-                                            "nombre": "Reportes Declaración 532"
+                                            "nombre": "Disponer formato de retención manual de divisas"
+                                        },
+                                        {
+                                            "nombre": "Reportes Formulario DIAN 532"
                                         }
                                     ]
                                 },
@@ -2473,46 +2503,37 @@
                                     "nombre": "Formulario 534",
                                     "tareas": [
                                         {
-                                            "nombre": "Verificar si el usuario se encuentra inscrito en el módulo de registro"
+                                            "nombre": "Activación de submodulos"
                                         },
                                         {
-                                            "nombre": "Disponer y permitir la selección del Formulario DIAN 534"
+                                            "nombre": "Reflejar formulario correspondiente con la información del dato maestro de Registro"
                                         },
                                         {
-                                            "nombre": "Seleccionar el tipo de operación a declarar y calidad en la que se presenta la declaración"
+                                            "nombre": "Seleccionar tipo de operación y calidad del declarante"
                                         },
                                         {
-                                            "nombre": "Habilitar el diligenciamiento del Formulario DIAN 534"
+                                            "nombre": "Diligenciamiento"
                                         },
                                         {
                                             "nombre": "Cargar documentos soporte Formulario DIAN 534"
                                         },
                                         {
-                                            "nombre": "Aceptar y numerar el borrador del Formulario DIAN 534"
+                                            "nombre": "Numeración y aceptación de la declaración (Borrador)"
                                         },
                                         {
-                                            "nombre": "Validar que la numeración y aceptación del Formulario DIAN 534 se efectúe en término y generar alertas tempranas si hay lugar a ello"
+                                            "nombre": "Validación de términos y generación de alertas tempranas"
                                         },
                                         {
-                                            "nombre": "Habilitar liquidación de infracción con pago reducido"
+                                            "nombre": "Liquidación"
                                         },
                                         {
-                                            "nombre": "Vincular con el módulo M-16"
+                                            "nombre": "Firma Formulario 534"
                                         },
                                         {
-                                            "nombre": "Habilitar la edición de campos del borrador Formulario DIAN 534"
+                                            "nombre": "Presentación Formulario 534"
                                         },
                                         {
-                                            "nombre": "Numerar y aceptar borrador final del Formulario DIAN 534"
-                                        },
-                                        {
-                                            "nombre": "Habilitar y validar firma del Formulario DIAN 532"
-                                        },
-                                        {
-                                            "nombre": "Presentar el Formulario DIAN 534 y enviar prueba de presentación al correo informado por el declarante"
-                                        },
-                                        {
-                                            "nombre": "Reportes Declaración 534"
+                                            "nombre": "Reportes Formulario DIAN 534"
                                         }
                                     ]
                                 }
@@ -2753,6 +2774,15 @@
                                             "nombre": "Recurso"
                                         },
                                         {
+                                            "nombre": "Demanda"
+                                        },
+                                        {
+                                            "nombre": "Cumplimiento Fallo"
+                                        },
+                                        {
+                                            "nombre": "Revocatoria"
+                                        },
+                                        {
                                             "nombre": "Cierre"
                                         },
                                         {
@@ -2770,7 +2800,7 @@
                                             "nombre": "Sustanciación"
                                         },
                                         {
-                                            "nombre": "Informe"
+                                            "nombre": "Informe Viabilidad"
                                         },
                                         {
                                             "nombre": "Pago"
@@ -2810,6 +2840,15 @@
                                             "nombre": "Recurso"
                                         },
                                         {
+                                            "nombre": "Demanda"
+                                        },
+                                        {
+                                            "nombre": "Revocatoria"
+                                        },
+                                        {
+                                            "nombre": "Cumplimiento Fallo"
+                                        },
+                                        {
                                             "nombre": "Cierre Expediente"
                                         },
                                         {
@@ -2839,7 +2878,22 @@
                                             "nombre": "Recurso"
                                         },
                                         {
-                                            "nombre": "Cierre"
+                                            "nombre": "Demanda"
+                                        },
+                                        {
+                                            "nombre": "Fallo"
+                                        },
+                                        {
+                                            "nombre": "Demanda"
+                                        },
+                                        {
+                                            "nombre": "Revocatoria"
+                                        },
+                                        {
+                                            "nombre": "Cumplimiento Fallo"
+                                        },
+                                        {
+                                            "nombre": "Cierre Expediente"
                                         },
                                         {
                                             "nombre": "Reportes"
@@ -2876,6 +2930,15 @@
                                         },
                                         {
                                             "nombre": "Recurso"
+                                        },
+                                        {
+                                            "nombre": "Demanda"
+                                        },
+                                        {
+                                            "nombre": "Cumplimiento Fallo"
+                                        },
+                                        {
+                                            "nombre": "Revocatoria"
                                         },
                                         {
                                             "nombre": "Cierre"
@@ -5101,10 +5164,16 @@
                                             "nombre": "Listar Obligaciones Pendientes de pago."
                                         },
                                         {
-                                            "nombre": "Generación de Recibo Oficial de Pago ROP - Borrador"
+                                            "nombre": "Direccionar a opción de pagos"
+                                        },
+                                        {
+                                            "nombre": "Generación de Recibo Oficial de Pago ROP - en estado borrador editable"
                                         },
                                         {
                                             "nombre": "Generación de Recibo Oficial de Pago ROP - Definitivo"
+                                        },
+                                        {
+                                            "nombre": "anulación de Recibo Oficial de Pago ROP - Definitivo"
                                         }
                                     ]
                                 },
@@ -5115,10 +5184,15 @@
                                             "nombre": "Generación de Referencia Temporal de pago"
                                         },
                                         {
-                                            "nombre": "Generación de Recibo Oficial de Pago ROP - Borrador"
-                                        },
-                                        {
                                             "nombre": "Generación de Recibo Oficial de Pago ROP - Definitivo"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "nombre": "Gestión de pagos ágiles de obligaciones TACI desde portal web",
+                                    "tareas": [
+                                        {
+                                            "nombre": "Realizar pago ágil desde portal web"
                                         }
                                     ]
                                 }
